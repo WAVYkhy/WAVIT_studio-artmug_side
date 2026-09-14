@@ -139,18 +139,22 @@ new_script = """<script>
     function updateOnlineStatus(statusType) {
       const badge = document.getElementById('wmStatusBadge');
       const text = document.getElementById('wmStatusText');
+      const tooltip = document.getElementById('wmStatusTooltip');
       if (!badge || !text) return;
       
       badge.className = 'wm-status';
       if (statusType === 'online') {
         badge.classList.add('is-online');
         text.textContent = 'ONLINE';
+        if (tooltip) tooltip.textContent = '현재 바로 답변 가능합니다';
       } else if (statusType === 'idle' || statusType === 'dnd') {
         badge.classList.add('is-idle');
         text.textContent = 'AWAY';
+        if (tooltip) tooltip.textContent = '답변에 잠시 시간이 소요됩니다';
       } else {
         badge.classList.add('is-offline');
         text.textContent = 'OFFLINE';
+        if (tooltip) tooltip.textContent = '문의를 남겨두시면 최대한 빠르게 답변드리겠습니다';
       }
     }
 

@@ -1,0 +1,503 @@
+# -*- coding: utf-8 -*-
+import os
+import urllib.request
+import re
+
+print("Starting fix_full_page.py...")
+
+# 1. Fetch raw live Artmug page
+url = "https://artmug.kr/index.php?channel=view&uid=58709"
+req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+raw_html = urllib.request.urlopen(req, timeout=15).read().decode('utf-8', errors='ignore')
+print(f"Fetched live HTML ({len(raw_html)} bytes)")
+
+# 2. Add base tag
+if '<head>' in raw_html:
+    raw_html = raw_html.replace('<head>', '<head>\n<base href="https://artmug.kr/">')
+
+# 3. Download and inline Artmug CSS
+css_urls = [
+    'https://artmug.kr/skin/default/css/style.css?ver=339',
+    'https://artmug.kr/skin/default/awesome/font-awesome.css'
+]
+combined_css = ""
+for c_url in css_urls:
+    try:
+        c_req = urllib.request.Request(c_url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+        c_data = urllib.request.urlopen(c_req, timeout=10).read().decode('utf-8', errors='ignore')
+        c_data = c_data.replace('url(../', 'url(https://artmug.kr/skin/default/')
+        c_data = c_data.replace("url('../", "url('https://artmug.kr/skin/default/")
+        c_data = c_data.replace('url("../', 'url("https://artmug.kr/skin/default/')
+        combined_css += f"\n/* --- Fetched: {c_url} --- */\n" + c_data
+    except Exception as e:
+        print(f"Error fetching CSS {c_url}: {e}")
+
+# Mocks for getAfter and wcs to eliminate local console errors
+mock_js = """<script>
+  window.getAfter = window.getAfter || function(){};
+  window.wcs = window.wcs || { cn: function(){}, inflow: function(){}, pageview: function(){} };
+</script>"""
+
+if '</head>' in raw_html:
+    raw_html = raw_html.replace('</head>', f'<style id="artmug-inlined-css">\n{combined_css}\n</style>\n{mock_js}\n</head>')
+
+# 4. Define complete 5-button custom side menu widget with fixed floating positioning
+side_menu_widget = """<!-- 아트머그 우측 커스텀 메뉴 (Nordic Glass-Cut 5-Button Complete Widget) -->
+<style>
+  :root {
+    --nordic-bg: #FAFAFA;
+    --nordic-surface: #FFFFFF;
+    --nordic-surface-subtle: #F4F4F5;
+    --nordic-border: #D4D4D8;
+    --nordic-border-strong: #000000;
+    --text-primary: #000000;
+    --text-secondary: #3F3F46;
+    --text-muted: #71717A;
+    --accent-surface: #000000;
+    --accent-text: #FFFFFF;
+    --card-radius: 2px;
+    --cell-radius: 2px;
+    --pill-radius: 2px;
+  }
+
+  .artmug-side-menu {
+    position: fixed !important;
+    top: 100px !important;
+    right: 24px !important;
+    width: 190px !important;
+    box-sizing: border-box !important;
+    background: var(--nordic-surface) !important;
+    border: 1px solid var(--nordic-border) !important;
+    border-radius: var(--card-radius) !important;
+    padding: 14px 10px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+    color: var(--text-primary) !important;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    overflow: visible !important;
+    z-index: 999999 !important;
+  }
+
+  /* 상단 읽기 진행률 프로그레스 바 */
+  .wm-progress-wrapper {
+    height: 2px;
+    background: var(--nordic-surface-subtle);
+    width: 100%;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .wm-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--accent-surface);
+    transition: width 0.1s linear;
+  }
+
+  /* 헤더 & 동적 상태 배지 */
+  .wm-header {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--nordic-border);
+  }
+  .wm-title {
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  /* 툴팁 래퍼 */
+  .wm-status-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .wm-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 8px;
+    border-radius: var(--pill-radius);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    transition: all 0.2s ease;
+    cursor: default;
+  }
+  .wm-status-sq {
+    width: 4px;
+    height: 4px;
+    border-radius: 1px;
+  }
+
+  .wm-status.is-online {
+    background: #ECFDF5;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #059669;
+  }
+  .wm-status.is-online .wm-status-sq {
+    background-color: #10B981;
+    box-shadow: 0 0 4px #10B981;
+  }
+
+  .wm-status.is-idle {
+    background: #FFFBEB;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #D97706;
+  }
+  .wm-status.is-idle .wm-status-sq {
+    background-color: #F59E0B;
+  }
+
+  .wm-status.is-offline {
+    background: #F4F4F5;
+    border: 1px solid #D4D4D8;
+    color: #71717A;
+  }
+  .wm-status.is-offline .wm-status-sq {
+    background-color: #A1A1AA;
+  }
+
+  /* AWAY / OFFLINE 호버 툴팁 스타일 */
+  .wm-status-tooltip {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: #18181B;
+    color: #FFFFFF;
+    padding: 4px 8px;
+    border-radius: var(--card-radius);
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s ease;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .wm-status.is-idle:hover + .wm-status-tooltip,
+  .wm-status.is-offline:hover + .wm-status-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(2px);
+  }
+
+  .wm-section-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin: 10px 0 6px 2px;
+  }
+
+  .wm-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .wm-nav-item button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    color: var(--text-secondary);
+    background: var(--nordic-surface-subtle);
+    border: 1px solid var(--nordic-border);
+    border-radius: var(--cell-radius);
+    transition: all 0.12s ease;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+  }
+
+  .wm-nav-item button:hover {
+    background: var(--accent-surface) !important;
+    color: var(--accent-text) !important;
+    border-color: var(--accent-surface) !important;
+  }
+
+  .wm-nav-arrow {
+    font-size: 10px;
+    opacity: 0.5;
+    transition: transform 0.12s ease;
+  }
+  .wm-nav-item button:hover .wm-nav-arrow {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+
+  .wm-top-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 10px;
+    padding: 6px 0;
+    color: var(--text-muted);
+    background: var(--nordic-surface-subtle);
+    border: 1px solid var(--nordic-border);
+    border-radius: var(--pill-radius);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    cursor: pointer;
+    transition: all 0.12s ease;
+  }
+  .wm-top-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--nordic-border-strong);
+    background: var(--nordic-surface);
+  }
+</style>
+
+<div class="artmug-side-menu">
+  <!-- 상단 읽기 진행률 프로그레스 바 -->
+  <div class="wm-progress-wrapper">
+    <div class="wm-progress-bar" id="wmProgressBar"></div>
+  </div>
+
+  <!-- 브랜드 헤더 & 동적 상태 배지 & 호버 툴팁 -->
+  <div class="wm-header">
+    <div class="wm-title">WAVIT STUDIO</div>
+    <div class="wm-status-wrapper">
+      <div class="wm-status is-online" id="wmStatusBadge">
+        <span class="wm-status-sq"></span>
+        <span id="wmStatusText">ONLINE</span>
+      </div>
+      <div class="wm-status-tooltip" id="wmStatusTooltip">답변까지 다소 시간이 소요될 수 있습니다.</div>
+    </div>
+  </div>
+
+  <!-- 목차 (5개 항목) -->
+  <div class="wm-section-label">Quick Navigation</div>
+  <ul class="wm-nav-list">
+    <li class="wm-nav-item">
+      <button type="button" onclick="wmScrollTo('sec-preview')">
+        <span>미리보기</span>
+        <span class="wm-nav-arrow">&rarr;</span>
+      </button>
+    </li>
+    <li class="wm-nav-item">
+      <button type="button" onclick="wmScrollTo('sec-schedule')">
+        <span>작업 일정</span>
+        <span class="wm-nav-arrow">&rarr;</span>
+      </button>
+    </li>
+    <li class="wm-nav-item">
+      <button type="button" onclick="wmScrollTo('sec-portfolio')">
+        <span>포트폴리오</span>
+        <span class="wm-nav-arrow">&rarr;</span>
+      </button>
+    </li>
+    <li class="wm-nav-item">
+      <button type="button" onclick="wmScrollTo('sec-quote')">
+        <span>견적 계산기</span>
+        <span class="wm-nav-arrow">&rarr;</span>
+      </button>
+    </li>
+    <li class="wm-nav-item">
+      <button type="button" onclick="wmScrollTo('sec-notice')">
+        <span>주의사항</span>
+        <span class="wm-nav-arrow">&rarr;</span>
+      </button>
+    </li>
+  </ul>
+
+  <!-- 맨 위로 이동 -->
+  <button type="button" class="wm-top-btn" onclick="wmScrollToTop()">TOP</button>
+</div>
+
+<script>
+  // 아트머그 공식 '상세설명 더보기' (.btn_open_btn, .detailinfo.showstep1) 강제 자동 펼침 함수
+  function wmExpandArtmugContent() {
+    try {
+      // 1. 아트머그 공식 펼침 버튼 (.btn_open_btn) 클릭
+      const btnOpen = document.querySelector('.btn_open_btn') || document.querySelector('.btn_open');
+      if (btnOpen && typeof btnOpen.click === 'function') {
+        btnOpen.click();
+      }
+
+      // 2. detailinfo 박스의 showstep1 클래스 직접 제거 및 높이 무제한 해제
+      const detailInfo = document.querySelector('.detailinfo');
+      if (detailInfo) {
+        detailInfo.classList.remove('showstep1');
+        detailInfo.style.maxHeight = 'none';
+        detailInfo.style.height = 'auto';
+        detailInfo.style.overflow = 'visible';
+      }
+
+      // 3. 더보기 버튼 영역 숨김
+      const btnOpenWrap = document.querySelector('.btn_open');
+      if (btnOpenWrap) {
+        btnOpenWrap.classList.add('hide');
+        btnOpenWrap.style.display = 'none';
+      }
+    } catch (e) {}
+  }
+
+  function wmScrollTo(targetId) {
+    try {
+      // 본문 무조건 자동 펼침
+      wmExpandArtmugContent();
+
+      // 상위 부모 요소들의 inner scrollTop 및 높이 제한 해제
+      const parents = document.querySelectorAll('.goods_detail_content, .goods_detail_wrap, #goods_detail, .detailinfo, div');
+      parents.forEach(p => {
+        if (p.scrollTop > 0) p.scrollTop = 0;
+        if (p.style) {
+          if (p.style.maxHeight) p.style.maxHeight = 'none';
+          if (p.style.overflow === 'hidden') p.style.overflow = 'visible';
+        }
+      });
+
+      // 0.25초 지연 대기 후 절대 Y 좌표로 윈도우 스크롤 이동
+      setTimeout(() => {
+        let targetEl = document.getElementById(targetId);
+        if (!targetEl) {
+          if (targetId === 'sec-preview') {
+            targetEl = document.getElementById('sec-preview') ||
+                       document.querySelector('.showcontent img') ||
+                       document.querySelector('img[src*="17852640420"]') ||
+                       document.querySelector('.showcontent');
+          }
+          else if (targetId === 'sec-schedule') {
+            targetEl = document.querySelector('iframe[src*="schedule"]');
+          }
+          else if (targetId === 'sec-portfolio') {
+            targetEl = document.querySelector('iframe[src*="sharp_embed"]');
+          }
+          else if (targetId === 'sec-quote') {
+            targetEl = document.querySelector('iframe[src*="WAVIT-quote"]');
+          }
+          else if (targetId === 'sec-notice') {
+            targetEl = document.getElementById('sec-notice');
+            if (!targetEl) {
+              const contentArea = document.querySelector('.showcontent') || document.body;
+              const allEls = contentArea.querySelectorAll('b, font, div, span, p');
+              for (let i = 0; i < allEls.length; i++) {
+                if (allEls[i].closest('.artmug-side-menu')) continue;
+                const text = allEls[i].textContent || '';
+                if (text.includes('신청 전 주의사항')) {
+                  targetEl = allEls[i];
+                  break;
+                }
+              }
+            }
+          }
+        }
+
+        if (targetEl) {
+          let p = targetEl.parentElement;
+          while (p && p !== document.body) {
+            if (p.scrollTop > 0) p.scrollTop = 0;
+            p = p.parentElement;
+          }
+
+          const rect = targetEl.getBoundingClientRect();
+          const absoluteY = rect.top + window.pageYOffset - 80;
+          window.scrollTo({ top: Math.max(0, absoluteY), behavior: 'smooth' });
+        }
+      }, 250);
+    } catch (e) {}
+  }
+
+  function wmScrollToTop() {
+    try {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (e) {}
+  }
+
+  // 상단 읽기 진행률 프로그레스 바 스크롤 리스너
+  window.addEventListener('scroll', function() {
+    try {
+      const pBar = document.getElementById('wmProgressBar');
+      if (pBar) {
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        if (total > 0) {
+          const pct = (window.scrollY / total) * 100;
+          pBar.style.width = Math.min(100, Math.max(0, pct)) + '%';
+        }
+      }
+    } catch (e) {}
+  }, { passive: true });
+
+  (function() {
+    const DISCORD_USER_ID = "680023951157624875";
+
+    function updateOnlineStatus(statusType) {
+      const badge = document.getElementById('wmStatusBadge');
+      const text = document.getElementById('wmStatusText');
+      if (!badge || !text) return;
+      
+      badge.className = 'wm-status';
+      if (statusType === 'online') {
+        badge.classList.add('is-online');
+        text.textContent = 'ONLINE';
+      } else if (statusType === 'idle' || statusType === 'dnd') {
+        badge.classList.add('is-idle');
+        text.textContent = 'AWAY';
+      } else {
+        badge.classList.add('is-offline');
+        text.textContent = 'OFFLINE';
+      }
+    }
+
+    if (DISCORD_USER_ID) {
+      fetch('https://api.lanyard.rest/v1/users/' + DISCORD_USER_ID)
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.success && data.data) {
+            updateOnlineStatus(data.data.discord_status);
+          }
+        })
+        .catch(() => updateOnlineStatus('online'));
+    }
+  })();
+</script>"""
+
+# 5. Insert side_menu_widget before #detailViews
+raw_html = raw_html.replace('<div id="detailViews">', f'{side_menu_widget}\n<div id="detailViews">')
+
+# 6. Ensure anchors #sec-preview and #sec-notice exist in showcontent
+if 'id="sec-preview"' not in raw_html:
+    raw_html = raw_html.replace('<div class="showcontent">', '<div class="showcontent"><div id="sec-preview"></div>')
+    print("Added #sec-preview anchor")
+
+if 'id="sec-notice"' not in raw_html:
+    target_str = '신청 전 주의사항'
+    if target_str in raw_html:
+        idx = raw_html.find(target_str)
+        # find preceding tag
+        tag_start = raw_html.rfind('<', 0, idx)
+        raw_html = raw_html[:tag_start] + '<div id="sec-notice"></div>' + raw_html[tag_start:]
+        print("Added #sec-notice anchor")
+
+# 7. Write to artmug_live_full.html and index.html
+with open(r"d:\Study\artmug side menu\artmug_live_full.html", "w", encoding="utf-8") as f:
+    f.write(raw_html)
+print("Saved artmug_live_full.html")
+
+with open(r"d:\Study\artmug side menu\index.html", "w", encoding="utf-8") as f:
+    f.write(raw_html)
+print("Saved index.html")
+print("All done successfully!")

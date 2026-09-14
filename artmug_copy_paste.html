@@ -1,87 +1,288 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
-<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
-
-<!-- HEAD START -->
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<base href="https://artmug.kr/">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>WAVIT_studio 작가 - 아트머그 - PV / Live2D</title>
-<meta name="Description" content="WAVIT_studio 작가 - 아트머그 - PV / Live2D/ 커버곡/ PV/ 모션그래픽/ 오리지널곡/ 리깅/ live2d/ 카피/ / 샘플, 포트폴리오, 제작문의, 이용후기 및 평점" />
-<meta name="Keywords" content="WAVIT_studio/ 커버곡/ PV/ 모션그래픽/ 오리지널곡/ 리깅/ live2d/ 카피" />
-<link rel="canonical" href="https://artmug.kr">
-<!-- 오픈 그래프 -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="아트머그">
-<meta property="og:url" content="http://artmug.kr/index.php?channel=view&uid=58709">
-<meta property="og:title" content="WAVIT_studio 작가 - 아트머그 - PV / Live2D">
-<meta property="og:description" content="WAVIT_studio 작가 - 아트머그 - PV / Live2D/ 커버곡/ PV/ 모션그래픽/ 오리지널곡/ 리깅/ live2d/ 카피/ / 샘플, 포트폴리오, 제작문의, 이용후기 및 평점">
-<meta property="og:image" content="http://artmug.kr/image/goods_img3/5/58709.jpg?ver=1789198789">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WAVIT_studio 작가 - 아트머그 - PV / Live2D">
-<meta name="twitter:description" content="WAVIT_studio 작가 - 아트머그 - PV / Live2D/ 커버곡/ PV/ 모션그래픽/ 오리지널곡/ 리깅/ live2d/ 카피/ / 샘플, 포트폴리오, 제작문의, 이용후기 및 평점">
-<meta name="twitter:image" content="http://artmug.kr/image/goods_img3/5/58709.jpg?ver=1789198789">
-<meta name="twitter:url" content="http://artmug.kr/index.php?channel=view&uid=58709">
-<script type="application/ld+json">
-{
- "@context": "http://schema.org",
- "@type": "Person",
- "name": "아트머그",
- "url": "http://artmug.kr",
- "sameAs": [
-   "https://blog.naver.com/art_mug",
- ]
-}
-</script>
-<!-- 파비콘 -->
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/favicon/site.webmanifest">
-<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#7d7d7d">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
-<!-- 파비콘 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artmug Custom Side Menu (No Clipping Fix) - WAVIT Studio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+  <style>
+    /* Nordic Glass-Cut Sharp Edge Tokens (Light Mode Spec) */
+    :root {
+      --nordic-bg: #FAFAFA;
+      --nordic-surface: #FFFFFF;
+      --nordic-surface-subtle: #F4F4F5;
+      --nordic-border: #D4D4D8;
+      --nordic-border-strong: #000000;
 
-<!-- <script  src="http://code.jquery.com/jquery-latest.min.js"></script> -->
-<script type="text/javascript" src="lib/lib.Function.js?ver=177"></script>
-<script type="text/javascript" src="lib/lib.lightBox.js?ver=177"></script>
-<script type="text/javascript" src="lib/lib.popupBox.js?ver=177"></script>
-<script type="text/javascript" src="lib/lib.messageBox.js?ver=177"></script>
-<script type="text/javascript" src="lib/lib.ckForm.js?ver=177"></script>
-<script type="text/javascript" src="lib/lib.ajax.js?ver=1"></script>
-<script type="text/javascript" src="lib/jquery.min.js"></script>
-<script type="text/javascript" src="skin/default/skin.lib.Shop.js?ver=177"></script>
-<link rel="StyleSheet" href="skin/default/css/style.css?ver=342" type="text/css" title="style" />
+      --text-primary: #000000;
+      --text-secondary: #3F3F46;
+      --text-muted: #71717A;
 
-<!-- 구글전환추적 공통 Global site tag (gtag.js) - Google AdWords: 848534494 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-848534494"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      --accent-surface: #000000;
+      --accent-text: #FFFFFF;
 
-  gtag('config', 'AW-848534494');
-</script>
+      --card-radius: 2px;
+      --cell-radius: 2px;
+      --pill-radius: 2px;
 
+      --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
 
-<!-- 구글 리마케팅 태그, 이벤트 스니펫 -->
-<script>
-  gtag('event', 'page_view', {
-	'send_to': 'AW-848534494',
-	'dynx_itemid': 'replace with value'
-  });
-</script>
+    html {
+      scroll-behavior: smooth;
+    }
 
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--nordic-bg);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      letter-spacing: -0.015em;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .artmug-container {
+      display: flex;
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 24px;
+      gap: 24px;
+      position: relative;
+    }
 
-<script type="text/javascript">
-<!--
-shop_skin = 'skin/default/';
-paths = "";
+    .artmug-content {
+      flex: 1;
+      min-width: 0;
+      background: var(--nordic-surface);
+      padding: 32px;
+      border-radius: var(--card-radius);
+      border: 1px solid var(--nordic-border);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    }
 
-// -->
-</script>
+    .artmug-content img {
+      max-width: 100%;
+      height: auto;
+    }
 
+    /* 아트머그 우측 커스텀 메뉴 */
+    .artmug-side-menu-wrapper {
+      width: 190px;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .artmug-side-menu {
+      width: 190px;
+      box-sizing: border-box;
+      background: var(--nordic-surface) !important;
+      border: 1px solid var(--nordic-border) !important;
+      border-radius: var(--card-radius) !important;
+      padding: 14px 10px !important;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+      color: var(--text-primary) !important;
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif !important;
+      font-size: 12px !important;
+      line-height: 1.4 !important;
+      overflow: visible !important;
+      transition: transform 0.1s ease-out;
+      will-change: transform;
+      z-index: 999999;
+    }
+
+    /* 상단 읽기 진행률 프로그레스 바 */
+    .wm-progress-wrapper {
+      height: 2px;
+      background: var(--nordic-surface-subtle);
+      width: 100%;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .wm-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: var(--accent-surface);
+      transition: width 0.1s linear;
+    }
+
+    /* 헤더 & 동적 실시간 상태 배지 */
+    .wm-header {
+      text-align: center;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--nordic-border);
+    }
+
+    .wm-title {
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    /* 툴팁 래퍼 */
+    .wm-status-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .wm-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 8px;
+      border-radius: var(--pill-radius);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      transition: all 0.2s ease;
+      cursor: default;
+    }
+
+    .wm-status.is-online {
+      background: #ECFDF5;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #059669;
+    }
+    .wm-status.is-online .wm-status-sq {
+      background-color: #10B981;
+      box-shadow: 0 0 4px #10B981;
+    }
+
+    .wm-status.is-idle {
+      background: #FFFBEB;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #D97706;
+    }
+    .wm-status.is-idle .wm-status-sq {
+      background-color: #F59E0B;
+    }
+
+    .wm-status.is-offline {
+      background: #F4F4F5;
+      border: 1px solid #D4D4D8;
+      color: #71717A;
+    }
+    .wm-status.is-offline .wm-status-sq {
+      background-color: #A1A1AA;
+    }
+
+    .wm-status-sq {
+      width: 4px;
+      height: 4px;
+      border-radius: 1px;
+    }
+
+    /* AWAY / OFFLINE 호버 툴팁 스타일 */
+    .wm-status-tooltip {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      background: #18181B;
+      color: #FFFFFF;
+      padding: 4px 8px;
+      border-radius: var(--card-radius);
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.15s ease;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .wm-status:hover + .wm-status-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(2px);
+    }
+
+    .wm-section-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin: 10px 0 6px 2px;
+    }
+
+    .wm-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .wm-nav-item button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 10px;
+      color: var(--text-secondary);
+      background: var(--nordic-surface-subtle);
+      border: 1px solid var(--nordic-border);
+      border-radius: var(--cell-radius);
+      transition: all 0.12s ease;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      cursor: pointer;
+      font-family: inherit;
+      text-align: left;
+    }
+
+    .wm-nav-item button:hover {
+      background: var(--accent-surface) !important;
+      color: var(--accent-text) !important;
+      border-color: var(--accent-surface) !important;
+    }
+
+    .wm-nav-arrow {
+      font-size: 10px;
+      opacity: 0.5;
+      transition: transform 0.12s ease;
+    }
+    .wm-nav-item button:hover .wm-nav-arrow {
+      opacity: 1;
+      transform: translateX(2px);
+    }
+
+    .wm-top-btn {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      margin-top: 10px;
+      padding: 6px 0;
+      color: var(--text-muted);
+      background: var(--nordic-surface-subtle);
+      border: 1px solid var(--nordic-border);
+      border-radius: var(--pill-radius);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      cursor: pointer;
+      transition: all 0.12s ease;
+    }
+
+    .wm-top-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--nordic-border-strong);
+      background: var(--nordic-surface);
+    }
+  </style>
 <style id="artmug-inlined-css">
 
 /* --- Fetched: https://artmug.kr/skin/default/css/style.css?ver=339 --- */
@@ -364,7 +565,7 @@ border: 1px solid #ff5200;
 .rBtn_dGray {float:right;cursor:pointer; padding:0 10px; height: 28px; text-align: center; line-height: 28px; border:1px solid #818181; background:#818181; font-size: 13px; margin:0 auto;border-radius:3px; color:#fff;} /*****이미지 버튼*****/
 .rBtn_dGray:hover {background:#666666;} 
 
-#subTitle {margin-bottom:42px;}
+#subTitle {margin-bottom:46px;}
 #subTitle:after {content:""; display:block; clear:both; visibility:hidden; width:0; height:0; }
 .gdBTitle {font-size:24px; letter-spacing: -1px;}
 .s_title {font-size:24px; letter-spacing: -1px;}
@@ -624,7 +825,7 @@ border: 1px solid #ff5200;
 #profile .goods_more a {   color: #ff5200}
 #profile .after {margin:20px auto 40px auto; width: 188px; text-align: center}
 #profile .after ol {padding-top:5px;}
-#profile .bill_mark {width:158px; height:22px; line-height: 22px; background-color:#ffe9de; border:1px solid #ffe9de; font-size:12px; text-align:center; margin:20px auto 0 auto;  border-radius: 11px; }
+#profile .bill_mark {width:158px; height:22px; line-height: 22px; background-color:#e4eaff; border:1px solid #e4eaff; font-size:12px; text-align:center; margin:20px auto 0 auto;  border-radius: 11px; }
 
 #goodsInfo { margin-top:6px; }
 #goodsInfo .head{ font-size:16px; height: 55px; line-height: 55px; background: #818181; color:#fff; text-align: center}
@@ -846,7 +1047,7 @@ border: 1px solid #ff5200;
 #order_sum ul:nth-child(3) {height: 32px; padding-top:8px;box-sizing: border-box;}
 #order_sum ul:nth-child(4) {height: 22px; padding-top:8px; }
 
-#order_old { float:right; height:34px; line-height: 34px; margin-right: 10px;}
+#order_old {font-weight: bold; float:right; height:34px; line-height: 34px; margin-right: 10px;}
 
 #order_list .list_item td {border: 1px solid #dadada; border-width: 1px 0; text-align:center; height: 29px; background: #f2f2f2; font-size:13px;}
 #order_list #list_info td {border-bottom: 1px solid #dadada; text-align:center; padding: 24px 0; }
@@ -3621,812 +3822,68 @@ html[xmlns] .clearfix { display: block; } /*사파리?*/
 }
 
 </style>
-<script>
-  window.getAfter = window.getAfter || function(){};
-  window.wcs = window.wcs || { cn: function(){}, inflow: function(){}, pageview: function(){} };
-</script>
 </head>
-<!-- @HEAD END -->
-
-<body >
-<h1>WAVIT_studio 작가 - 아트머그 - PV / Live2D/ 커버곡/ PV/ 모션그래픽/ 오리지널곡/ 리깅/ live2d/ 카피/ 샘플, 포트폴리오, 제작문의, 이용후기 및 평점</h1>
-<style>
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('skin/default/awesome/fontawesome-webfont.eot?v=4.3.0');
-  src: url('skin/default/awesome/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('skin/default/awesome/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('skin/default/awesome/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('skin/default/awesome/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('skin/default/awesome/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-</style>
-<link rel="stylesheet" href="skin/default/awesome/font-awesome.css">
-<SCRIPT LANGUAGE='JavaScript'>
-
-function load_sim_guide(){	// 간편 이용안내
-	$("#load_sim_guide").load("skin/default/doc_guide1.html"); 	
-}
-
-function show_id(num){
-	if(num=='1'){
-		$("#guide1").show(); 
-		$("#guide2").hide(); 
-		$('#tab1').attr('class','tab_on');
-		$('#tab2').attr('class','tab');
-	} else {
-		$("#guide1").hide(); 
-		$("#guide2").show(); 
-		$('#tab1').attr('class','tab');
-		$('#tab2').attr('class','tab_on');
-	}
-
-}
-
-var iMenuLayers = 6; // 총레이어개수
-function OnDisplayToggle(szObjName)
-{
-	var objId = document.all['idMenu'+szObjName];
-	var menuId = document.all['menuTop'+szObjName];
-	var arMenu = new Array(iMenuLayers);
-
-	for( var i=0; i<iMenuLayers; i++ )
-		arMenu[i] = 'idMenu'+i;
-
-	for( var i=0; i<arMenu.length; i++ ) {
-		if(document.all[arMenu[i]] && document.all[arMenu[i]]!=objId)
-			document.all[arMenu[i]].style.display = 'none';
-	}
-
-	if(objId) {
-		if(objId.style.display == '') {
-			objId.style.display = 'none';
-			if(menuId) menuId.style.backgroundColor = '';
-		} else {
-			objId.style.display = '';
-			if(menuId) menuId.style.backgroundColor = '#c65926';
-		}
-	}
-}
-
-function loading(sec){
-	document.getElementById('list_loading').style.display='block';
-	if(sec){
-		setTimeout(function(){
-			document.getElementById('list_loading').style.display='none';
-		}, sec*1000);
-	}
-}
-
-</SCRIPT>
-
-<div id="wrapBody" >
-
-
-<div id="topUtil">
-
-	<div class="siteWidth no_linkline" style="position: relative">
-		<div id="logo"><a href="index.php" onfocus="this.blur();"><img src="./image/design/logo.png" border="0" alt="아트머그 홈" title="아트머그 홈"></a></div>
-		
-
-		
-		<a href='index.php?channel=regist'><div style="float:right;" id="topbtn2" >회원가입</div></a>
-		<a href='index.php?channel=login'><div style="float:right;" id="topbtn1" >로그인</div></a>
-		
-		<div class="right"><!-- 고객센터 -->
-			<div id="menuTop2" class="menuTop" style="cursor:default;" onmouseover ="OnDisplayToggle('2');" onmouseout ="OnDisplayToggle('2');" >고객센터</div>
-			<div id="idMenu2" class="menuTop_s" style="display:none; " onmouseover ="OnDisplayToggle('2');" onmouseout ="OnDisplayToggle('2');" >
-				<a href='index.php?channel=board&code=customer'><ul><p>고객 문의</p></ul></a>
-				<a href='index.php?channel=board&code=faq'><ul><p>자주하는 질문</p></ul></a>
-				<a href='index.php?channel=board&code=premium'><ul><p>프리미엄 작가 등록</p></ul></a>
-				<a href='index.php?channel=doc_advertising'><ul><p>배너 광고 안내</p></ul></a>
-			</div>
-		</div>
-		<div class="right" style="position: relative;">
-			<a href='index.php?channel=after'><div id="menuTop6" class="menuTop" >이용후기</div></a>
-		</div>
-		<div class="right"><!-- 이용안내 -->
-			<div id="menuTop0" class="menuTop" style="cursor:default;" onmouseover ="OnDisplayToggle('0');" onmouseout ="OnDisplayToggle('0');" >이용안내</div>
-			<div id="idMenu0" class="menuTop_s" style="display:none; " onmouseover ="OnDisplayToggle('0');" onmouseout ="OnDisplayToggle('0');" >
-				<a  onclick="load_sim_guide()"><ul><p>간편 이용안내</p></ul></a>
-				<a href='index.php?channel=doc_guide_customer'><ul><p>의뢰자 이용안내</p></ul></a>
-				<a href='index.php?channel=doc_guide_writer'><ul><p>작가 이용안내</p></ul></a>
-				<a href='index.php?channel=doc_guide2'><ul><p>환불 규정 / 절차</p></ul></a>
-				<a href='index.php?channel=board&code=faq'><ul><p>자주하는 질문</p></ul></a>
-			</div>
-		</div>
-		<div class="right" style="position: relative;"><!-- 의뢰게시판 -->
-			<a href='index.php?channel=bbs_list'><div id="menuTop5" class="menuTop" >의뢰게시판</div></a>
-			<ul style="position:absolute; top:10px; left:93px">
-				
-			</ul>
-		</div>
-		<div class="right"><!-- 작품리스트 -->
-			<a href='index.php?channel=list&cate=100000000000' onclick="loading('1');"><div id="menuTop1" class="menuTop" onmouseover ="OnDisplayToggle('1');" onmouseout ="OnDisplayToggle('1');" >카테고리</div></a>
-			<div id="idMenu1" class="menuTop_s" style="display:none; " onmouseover ="OnDisplayToggle('1');" onmouseout ="OnDisplayToggle('1');" >
-				
-				<a href='index.php?channel=list&amp;cate=100000000000' onclick="loading('1');"><ul><p>캐릭터 일러스트</p></ul></a>
-				
-				<a href='index.php?channel=list&amp;cate=107000000000' onclick="loading('1');"><ul><p>일러스트</p></ul></a>
-				
-				<a href='index.php?channel=list&amp;cate=109000000000' onclick="loading('1');"><ul><p>버추얼 3D</p></ul></a>
-				
-				<a href='index.php?channel=list&amp;cate=110000000000' onclick="loading('1');"><ul><p>Live2D</p></ul></a>
-				
-				<a href='index.php?channel=list&amp;cate=104000000000' onclick="loading('1');"><ul><p>디자인</p></ul></a>
-				
-				<a href='index.php?channel=list&amp;cate=108000000000' onclick="loading('1');"><ul><p>영상</p></ul></a>
-				
-				<a href='index.php?channel=list&amp;cate=111000000000' onclick="loading('1');"><ul><p>음향</p></ul></a>
-				
-				<a href='index.php?channel=list&amp;cate=103000000000' onclick="loading('1');"><ul><p>웹툰 · 만화</p></ul></a>
-				
-				<a href='index.php?channel=list&amp;cate=106000000000' onclick="loading('1');"><ul><p>글 · 기타</p></ul></a>
-				
-			</div>
-		</div>
-
-	</div>
-</div>
-<div id="load_sim_guide"></div>
-
-
-
-<!--   LOADING BAR -->
-<div id="list_loading" onclick="this.style.display='none';">
-	<div class="center lsp0">				
-		<center>
-		<div style='height:22px'>&nbsp;</div>
-		Loading...
-		<div style='height:12px'>&nbsp;</div>
-		<img src='skin/default/img/common/bigWaiting.gif' border='0' alt="Loading..." />
-		</center>
-	</div>
-</div>
-<!--   @LOADING BAR -->
-
-			<!--  SEARCH START -->
-			<!-- <div id="topSearch" >	
-				<div id="searchKeyword">
-					<div id="topSch" class="small gray">
-						<form name="TsearchForm" method="get" onsubmit="return ckSearch();" action="index.php">
-						<input type="hidden" name="channel" value='search' />
-						<input type="hidden" name="field" value='' />
-						
-						<div class="topSch_box"><input type="text"  name="search"></div>			
-
-
-						<div class="left"><input type="image" src="skin/default/img/top/btn_search.gif" onfocus="blur();"  alt="검색" title="검색" /></div>
-						</form>
-					</div>	
-
-					<div class="blank" style="height:16px">&nbsp;</div>
-					
-				</div>		
-			</div> -->
-			<!--   @SEARCH END -->
-					
-				<style>
-/******* 더보기 ******/
-.showstep1{
-	max-height: 3000px;
-	overflow: hidden;
-}
-
-.hide{	display: none; }
-
-
-
-</style>
-
-<div class="confirm_box" id="confirm_order" style="display:none">
-	<ol class="msg" ><b>작가에게 견적과 완료 일정 확인 후 주문해 주세요.<br><font class="orange">작가에게 문의를 하셨습니까?</font></b></ol>
-	<div style="width:393px; margin:0 auto" class="left_right_ul">
-		<ul class="btn1" onclick="go_order();">확 인</ul>
-		<ul class="btn4" onclick="$('#confirm_order').hide()">취 소</ul>
-	</div>
-</div>
-
-
-
-<!-- MAIN CENTER START -->
-<div class="subContent">
-	
-	<div id="goods_head" class="cf">
-		<ul>
-			<ol class="making">방송 · 상업용 제작</ol>
-			<ol class="goods_num">영상 / 작품번호 : <font class="lsp0">58709</font> </ol>
-			 
-			<ol class="goods_title clear"><a href='index.php?channel=list&field=brand&search=d2tqbmV2ZXI=' title='작가 작품 더보기'>WAVIT_studio 작가</a><span style="margin:0 10px">&middot;</span>PV / Live2D </ol>
-			 
-		</ul>
-	</div>
-	<div id="big_img">
-		<div><img src='https://artmugfile2.cafe24.com/image/goods_img1/5/58709.jpg?ver=1789195801' border='0' style="max-width: 732px" title="WAVIT_studio 작가 - 아트머그 - PV / Live2D" alt="WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피" /></div>
-		 
-		<div><img src='https://artmugfile2.cafe24.com/image/goods_img1/5/58709B.jpg?ver=1789195801' border='0' style="max-width: 732px" title="WAVIT_studio 작가 - 아트머그 - PV / Live2D" alt="WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피"/></div>
-		 
-		 
-		<div><img src='https://artmugfile2.cafe24.com/image/goods_img1/5/58709C.jpg?ver=1789195801' border='0' style="max-width: 732px" title="WAVIT_studio 작가 - 아트머그 - PV / Live2D" alt="WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피"/></div>
-		 
-	</div>
-
-	<div id="rightInfo">
-
-		<div class="ad_banner6">
-		
-		</div><!-- 우상 -->
-		<!-- 프로필 -->
-		<div id="profile" class="cf">
-			<ul class="icon_wish"><a onclick="wishAdd('58709','N');"><img src="skin/default/img/common/icon_wish.png?ver=1" name="wish_icon" id="wish_icon" title="관심작가 추가/해제"></a></ul>
-			<ul class="face">
-				<a href="index.php?channel=list&field=brand&search=d2tqbmV2ZXI=" title="작가 작품 더보기" >
-				 
-				<ol class="round_face hand" style="background: url(./image/brand/17798681155.png) no-repeat center center; background-size: auto 110px" ></ol>
-				
-				
-				</a>
-			</ul>
-			<ul class="nic_name"><a href='index.php?channel=list&field=brand&search=d2tqbmV2ZXI=' title='작가 작품 더보기'>WAVIT_studio 작가</a></ul>
-			<ul class="brief default"></ul>
-			<center>
-			
-			<ol id="receive_Y">접수중</ol>
-			
-			
-			
-
-			
-			
-			</center>
-			<ul class="after cf">
-				<!-- <a href="#ankerA" title="후기 보기">
-				<div class="starBg" style="float:left">
-					<div style="width:%;overflow:hidden"><img src="skin/default/img/shop/icon_star.gif" /></div>
-				</div>
-				<ol>평점 <font class="lsp0"></font></ol>
-				 </a> -->
-				 
-				<div class="clear" >패널티 <b>0</b> 회</div>
-			 </ul>
-			<div class="contact default">
-				<ul style="margin-bottom: 13px" class="lsp0 orange bold"><i class="fa fa-exclamation-circle" id="help_left"></i>연락처</ul>
-				<ul class="Ldefault lsp0 fsize12" ><a href="#ankerQ" >연락처는 결제 후에 교환할 수 있습니다<br>결제 전에는 '문의 및 답변'을 이용해주세요</a></ul>
-			</div>
-				
-			<!-- <a href="index.php?channel=brand&amp;uid=51533" style="height:17px;"><span style="line-height:120%;">작가방</span></a>	 -->
-			<div class="clear"></div>
-		</div>
-		<div id="goodsInfo" class="cf">
-			<ul class="head">상세 옵션</ul>
-			<ul class="cf">
-				
-				<ol class="left_right_dl"><dl>제출 파일 유형</dl><dl class="lsp0">mp4</dl></ol>
-				<ol class="left_right_dl"><dl>해상도</dl><dl class="lsp0">72dpi</dl></ol>
-				<ol class="left_right_dl"><dl>기본 사이즈</dl><dl class="lsp0">1920*1080 등</dl></ol>
-				<ol class="left_right_dl"><dl>수정 횟수</dl><dl class="lsp0">3회</dl></ol>
-				<ol class="left_right_dl"><dl>작업 기간</dl><dl><li class="">시작일로부터 10일</li></dl></ol>
-				
-				
-			</ul>
-		</div>
-		<div id="goodsOrder" class="cf">
-			<ul class="head">가격 옵션</ul>
-			<ul class="orderInp cf" >
-				
-				<form name="goodsForm" method="post" onsubmit="return false;" action="php/cart_ok.php">
-				<input type='hidden' name='price' value='' />
-				<input type='hidden' name='p_price3' value='' />
-				<input type='hidden' name='p_total' value='210,000' />
-				<input type='hidden' name='p_total2' value='210,000' />
-				<input type='hidden' name='p_sale' value='' />
-				<input type='hidden' name='p_number' value='58709' />
-				<input type='hidden' name='defQty' value='' />
-				<input type='hidden' name='sQty' value='0' />
-				<input type='hidden' name='goodsUnit' value='개' />
-				<input type='hidden' name='ckLogin' value='N' />
-				<input type='hidden' name='page' value='' />
-				<!-- <input type='hidden' name='type' /> -->
-				<!-- <input type='hidden' name='direct' value='Y' /> -->
-				<input type='hidden' name='p_option' />
-				<input type='hidden' name='p_op' value='0' />
-				<input type='hidden' name='p_op_cnt' value='5' />
-				<input type='hidden' name='p_op_total_qty' value='0' />
-				<input type='hidden' name='p_option2' value='' />
-				<input type='hidden' name='p_op2_cnt' value='' />
-				<input type='hidden' name='cp_type' value='' />
-				<input type='hidden' name='p_carr' value='' />
-				<input type='hidden' name='p_carr_type' value='' />
-				<input type='hidden' name='total' value='0' />
-				<div id="optionPrice">
-					
-								
-					<li id="optionDiv">
-						<script LANGUAGE="JavaScript">
-						<!--
-						var optionView = 0;
-						// -->
-						</script>
-									
-						<div  class="clearfix">
-							<div class="goodsTitle_op">커버곡/오리지널곡</div>
-							<div class="goodsText" >
-								<input type='hidden' name='p_op1' value='' />
-								<input type='hidden' name='p_op_name1' value='커버곡/오리지널곡' />
-
-								<div id='opBox1' class='left opBox' style="width:150px; height:26px; white-space:nowrap;"></div>
-
-								<script type="text/javascript">
-									<!--
-									optionView = 1;
-									document.getElementById("opBox1").style.zIndex = (999-1);
-									opBox1s = new opSelectBox('opBox1',document.goodsForm.p_op1,'커버곡/오리지널곡');
-									opBox1s.addOps = 0;
-									opBox1s.addItem('선택하세요.','');
-										
-									opBox1s.addItem('오리지널곡 ( 210,000원 )','12227797::커버곡/오리지널곡 / 오리지널곡::210000::99999');
-										
-									opBox1s.addItem('커버곡 ( 210,000원 )','12227796::커버곡/오리지널곡 / 커버곡::210000::99999');
-										
-									opBox1s.show();
-									//-->
-								</script>	
-							</div>
-						</div>
-						<div class="space" ></div>
-									
-						<div  class="clearfix">
-							<div class="goodsTitle_op">사용 범위</div>
-							<div class="goodsText" >
-								<input type='hidden' name='p_op2' value='' />
-								<input type='hidden' name='p_op_name2' value='사용 범위' />
-
-								<div id='opBox2' class='left opBox' style="width:150px; height:26px; white-space:nowrap;"></div>
-
-								<script type="text/javascript">
-									<!--
-									optionView = 1;
-									document.getElementById("opBox2").style.zIndex = (999-2);
-									opBox2s = new opSelectBox('opBox2',document.goodsForm.p_op2,'사용 범위');
-									opBox2s.addOps = 0;
-									opBox2s.addItem('선택하세요.','');
-										
-									opBox2s.addItem('방송용','12245085::사용 범위 / 방송용::0::99999');
-										
-									opBox2s.addItem('상업용 - 전체 가격의 1.5x','12245086::사용 범위 / 상업용 - 전체 가격의 1.5x::0::99999');
-										
-									opBox2s.show();
-									//-->
-								</script>	
-							</div>
-						</div>
-						<div class="space" ></div>
-									
-						<div  class="clearfix">
-							<div class="goodsTitle_op">Live2D 추가</div>
-							<div class="goodsText" >
-								<input type='hidden' name='p_op3' value='' />
-								<input type='hidden' name='p_op_name3' value='Live2D 추가' />
-
-								<div id='opBox3' class='left opBox' style="width:150px; height:26px; white-space:nowrap;"></div>
-
-								<script type="text/javascript">
-									<!--
-									optionView = 1;
-									document.getElementById("opBox3").style.zIndex = (999-3);
-									opBox3s = new opSelectBox('opBox3',document.goodsForm.p_op3,'Live2D 추가');
-									opBox3s.addOps = 0;
-									opBox3s.addItem('선택하세요.','');
-										
-									opBox3s.addItem('30,000~100,000 (협의 필요)','12227798::Live2D 추가 / 30,000~100,000 (협의 필요)::0::99999');
-										
-									opBox3s.show();
-									//-->
-								</script>	
-							</div>
-						</div>
-						<div class="space" ></div>
-									
-						<div  class="clearfix">
-							<div class="goodsTitle_op">추가금</div>
-							<div class="goodsText" >
-								<input type='hidden' name='p_op4' value='' />
-								<input type='hidden' name='p_op_name4' value='추가금' />
-
-								<div id='opBox4' class='left opBox' style="width:150px; height:26px; white-space:nowrap;"></div>
-
-								<script type="text/javascript">
-									<!--
-									optionView = 1;
-									document.getElementById("opBox4").style.zIndex = (999-4);
-									opBox4s = new opSelectBox('opBox4',document.goodsForm.p_op4,'추가금');
-									opBox4s.addOps = 0;
-									opBox4s.addItem('선택하세요.','');
-										
-									opBox4s.addItem('인원 추가 (1인당) ( 20,000원 )','12227807::추가금 / 인원 추가 (1인당)::20000::99999');
-										
-									opBox4s.addItem('초과 영상길이 (30초당) ( 10,000원 )','12227808::추가금 / 초과 영상길이 (30초당)::10000::99999');
-										
-									opBox4s.addItem('간단 썸네일 추가 ( 15,000원 )','12229126::추가금 / 간단 썸네일 추가::15000::99999');
-										
-									opBox4s.show();
-									//-->
-								</script>	
-							</div>
-						</div>
-						<div class="space" ></div>
-									
-						<div  class="clearfix">
-							<div class="goodsTitle_op">카피 커버</div>
-							<div class="goodsText" >
-								<input type='hidden' name='p_op5' value='' />
-								<input type='hidden' name='p_op_name5' value='카피 커버' />
-
-								<div id='opBox5' class='left opBox' style="width:150px; height:26px; white-space:nowrap;"></div>
-
-								<script type="text/javascript">
-									<!--
-									optionView = 1;
-									document.getElementById("opBox5").style.zIndex = (999-5);
-									opBox5s = new opSelectBox('opBox5',document.goodsForm.p_op5,'카피 커버');
-									opBox5s.addOps = 0;
-									opBox5s.addItem('선택하세요.','');
-										
-									opBox5s.addItem('협의 필요','12232879::카피 커버 / 협의 필요::0::99999');
-										
-									opBox5s.show();
-									//-->
-								</script>	
-							</div>
-						</div>
-						<div class="space" ></div>
-									
-					</li>					
-
-					<li class="cf">
-						<div class="goodsTitle_op" style="margin: 10px 0 4px 0">결제금액 추가 / 합계 금액</div>
-						<input type="text" name="add_price" class="add_price" onblur="addPrice();" placeholder="(+)(-) 금액 또는 합계 금액">
-						<div class="right" ><ol class="addBtn" onclick="addPrice();">추가</ol></div>
-					</li>
-					
-				</div>
-				
-				<div id="optionResult">
-					<li id="addOptions"></li>
-				</div>
-				<div class="orderline"></div>
-				<div id="payment">
-					<ul >
-						<div class="totalTitle">결제 금액</div>
-						<div class="totalPrice lsp0" >
-							<span id="totals" >210</span><font style="font-size: 24px">원</font>
-						</div>
-					</ul>
-					<ul class="clear" style="height: 36px"></ul>
-					<div class="guide" style="line-height:1.8" >
-						<span class="orange"><i class="fa fa-exclamation-circle" id="help_left"></i>작가에게 견적 확인 후 주문해 주세요</span>
-					</div>
-					<ul >
-						
-						<p class="btn_qna" style="margin-bottom:14px" onclick="pLightBox.show('php/plogin.php?type=login','iframe','590','276','','20');">작가에게 문의
-						</p>
-						<p class="btn_order" onclick="pLightBox.show('php/plogin.php?type=login','iframe','590','276','','20');">주문 / 결제하기</p>
-						
-						<p class="btn_qna" style="margin-bottom:14px" onclick="pLightBox.show('php/qna_write.php?cate=108000000000&amp;number=58709','iframe_w','1080','500','문의하기','0'); qnaAlert() ;return false;">작가에게 문의&ensp;(답변 <font class="lsp0">100%</font>)
-						</p>
-						
-						
-					</ul>	
-				</div>	
-
-				</form>
-
-
-				<script LANGUAGE="JavaScript">
-				<!--
-				
-				if(optionView==0) {
-					document.getElementById('optionDiv').style.display = 'none';
-					document.getElementById('addOptions').style.display = 'none';
-				}	
-				// -->
-				</script>
-
-
-			</ul>
-		</div>
-		
-		<div class="ad_banner7"><a href="https://artmug.kr/php/banner_link.php?code=banner&uid=211" target="_blank"><img src='image/banner/banner_1787895167.jpg?ver=1787895167'></a></div><!-- 우중 -->
-		
-	</div>
-
-	<div id="custom_code">
-<!-- ================================================================= -->
-<!-- WAVIT STUDIO 아트머그 전용 커스텀 사이드 메뉴 (5개 버튼 완결본) -->
-<!-- 아트머그 '우측 커스텀 메뉴 (HTML)' 입력란에 그대로 복사하여 붙여넣으시면 됩니다. -->
-<!-- ================================================================= -->
-
-<!-- Pretendard 폰트 로드 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-
-<style>
-  /* [Nordic Glass-Cut Sharp Edge 디자인 토큰] */
-  :root {
-    --nordic-bg: #FAFAFA;
-    --nordic-surface: #FFFFFF;
-    --nordic-surface-subtle: #F4F4F5;
-    --nordic-border: #D4D4D8;
-    --nordic-border-strong: #000000;
-    --text-primary: #000000;
-    --text-secondary: #3F3F46;
-    --text-muted: #71717A;
-    --accent-surface: #000000;
-    --accent-text: #FFFFFF;
-    --card-radius: 2px;
-    --cell-radius: 2px;
-    --pill-radius: 2px;
-  }
-
-  .artmug-side-menu {
-    position: fixed !important;
-    top: 100px !important;
-    right: 24px !important;
-    width: 190px !important;
-    box-sizing: border-box !important;
-    background: var(--nordic-surface) !important;
-    border: 1px solid var(--nordic-border) !important;
-    border-radius: var(--card-radius) !important;
-    padding: 14px 10px !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
-    color: var(--text-primary) !important;
-    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-size: 12px !important;
-    line-height: 1.4 !important;
-    overflow: visible !important;
-    z-index: 999999 !important;
-  }
-
-  /* 상단 읽기 진행률 프로그레스 바 */
-  .wm-progress-wrapper {
-    height: 2px;
-    background: var(--nordic-surface-subtle);
-    width: 100%;
-    margin-bottom: 12px;
-    overflow: hidden;
-  }
-  .wm-progress-bar {
-    height: 100%;
-    width: 0%;
-    background: var(--accent-surface);
-    transition: width 0.1s linear;
-  }
-
-  /* 헤더 & 브랜드 */
-  .wm-header {
-    text-align: center;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid var(--nordic-border);
-  }
-  .wm-title {
-    font-weight: 700;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--text-primary);
-    margin-bottom: 6px;
-  }
-
-  /* 실시간 상태 배지 */
-  .wm-status-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-  .wm-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 3px 8px;
-    border-radius: var(--pill-radius);
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    transition: all 0.2s ease;
-    cursor: default;
-  }
-  .wm-status-sq {
-    width: 4px;
-    height: 4px;
-    border-radius: 1px;
-  }
-  .wm-status.is-online {
-    background: #ECFDF5;
-    border: 1px solid rgba(16, 185, 129, 0.3);
-    color: #059669;
-  }
-  .wm-status.is-online .wm-status-sq {
-    background-color: #10B981;
-    box-shadow: 0 0 4px #10B981;
-  }
-  .wm-status.is-idle {
-    background: #FFFBEB;
-    border: 1px solid rgba(245, 158, 11, 0.3);
-    color: #D97706;
-  }
-  .wm-status.is-idle .wm-status-sq {
-    background-color: #F59E0B;
-  }
-  .wm-status.is-offline {
-    background: #F4F4F5;
-    border: 1px solid #D4D4D8;
-    color: #71717A;
-  }
-  .wm-status.is-offline .wm-status-sq {
-    background-color: #A1A1AA;
-  }
-
-  /* AWAY / OFFLINE 호버 툴팁 */
-  .wm-status-tooltip {
-    position: absolute;
-    top: calc(100% + 5px);
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    background: #18181B;
-    color: #FFFFFF;
-    padding: 4px 8px;
-    border-radius: var(--card-radius);
-    font-size: 9.5px;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.15s ease;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  }
-  .wm-status.is-idle:hover + .wm-status-tooltip,
-  .wm-status.is-offline:hover + .wm-status-tooltip {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(2px);
-  }
-
-  .wm-section-label {
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    margin: 10px 0 6px 2px;
-  }
-
-  .wm-nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .wm-nav-item button {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 10px;
-    color: var(--text-secondary);
-    background: var(--nordic-surface-subtle);
-    border: 1px solid var(--nordic-border);
-    border-radius: var(--cell-radius);
-    transition: all 0.12s ease;
-    font-size: 11.5px;
-    font-weight: 600;
-    letter-spacing: -0.015em;
-    cursor: pointer;
-    font-family: inherit;
-    text-align: left;
-  }
-  .wm-nav-item button:hover {
-    background: var(--accent-surface) !important;
-    color: var(--accent-text) !important;
-    border-color: var(--accent-surface) !important;
-  }
-
-  .wm-nav-arrow {
-    font-size: 10px;
-    opacity: 0.5;
-    transition: transform 0.12s ease;
-  }
-  .wm-nav-item button:hover .wm-nav-arrow {
-    opacity: 1;
-    transform: translateX(2px);
-  }
-
-  .wm-top-btn {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    margin-top: 10px;
-    padding: 6px 0;
-    color: var(--text-muted);
-    background: var(--nordic-surface-subtle);
-    border: 1px solid var(--nordic-border);
-    border-radius: var(--pill-radius);
-    font-size: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    cursor: pointer;
-    transition: all 0.12s ease;
-  }
-  .wm-top-btn:hover {
-    color: var(--text-primary);
-    border-color: var(--nordic-border-strong);
-    background: var(--nordic-surface);
-  }
-</style>
-
-<div class="artmug-side-menu">
-  <!-- 상단 읽기 진행률 프로그레스 바 -->
-  <div class="wm-progress-wrapper">
-    <div class="wm-progress-bar" id="wmProgressBar"></div>
-  </div>
-
-  <!-- 브랜드 헤더 & 상태 배지 & 호버 툴팁 -->
-  <div class="wm-header">
-    <div class="wm-title">WAVIT STUDIO</div>
-    <div class="wm-status-wrapper">
-      <div class="wm-status is-online" id="wmStatusBadge">
-        <span class="wm-status-sq"></span>
-        <span id="wmStatusText">ONLINE</span>
+<body>
+
+  <div class="artmug-container">
+
+    <!-- [실제 아트머그 본문 HTML (artmug_post_with_ids.html)] -->
+    <main class="artmug-content">
+      <br><img src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17852640420.gif" border="0" width="640"><br><img src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17804794770.gif" border="0" width="640"><br><div><img src="https://i.postimg.cc/XYzz2SSr/artmug-2d-2-1-1.gif" alt="gif image"></div><div><img src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17820999920.gif" border="0" width="640"><br><img src="https://i.postimg.cc/QxVgfBXQ/artmug-2d-2-1-1-1.gif" alt="gif image"><br><img src="https://i.postimg.cc/bvY12dFQ/artmug-2d-2.gif" alt="gif image"><br><img src="https://i.postimg.cc/wBbRy2mZ/artmug-3d.gif" alt="gif image"></div><div><img src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17819358150.gif" border="0" width="640"><br></div><div><img src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17804794880.gif" border="0" width="640"><br><img src="https://i.postimg.cc/RVctswkh/artmug-l2d.gif" alt="gif image"><div><br></div><div><br></div><div><br></div><div>기본적인 모션그래픽 이외에도 <b>3D</b>, <b>Live2D</b> 등 다양한 스킬을 MV 제작에 활용하고 있습니다.</div><div>특히 Live2D에서는 귀엽고 통통튀는 그림체와 입체감이 느껴지는 2.5D를 포함하여 폭넓게 다루고 있습니다.</div><div><font size="2">(2.5D의 경우 파츠분리 디테일에 따라 구동범위가 크게 변하므로 일러스트 작가님께 의뢰 전 가이드 제작도 가능합니다)</font></div><div><font size="2"><br></font></div><div>최종적으로 의뢰를 하지 않더라도 궁금한 점이 있으시다면 언제든 편하게 문의 주시길 바랍니다.!</div><div><br></div><div><br></div><div><br></div><div><br></div><div id="sec-schedule"><iframe src="https://schedule-tracker-five.vercel.app" width="100%" height="1100px" style="border: none; border-radius: 8px;" allowfullscreen=""></iframe></div><div><br></div><div>MV 카피 의뢰의 경우 곡에 따라 기간이 상이하니 문의 부탁드립니다.</div><div><br></div><div id="sec-portfolio"><iframe src="https://wavykhy.github.io/WAVIT_studio_2/sharp_embed.html" width="100%" style="border: none; border-radius: 4px; width: 100%; height: 80vh; max-height: 900px; overflow-y: auto;" title="WAVIT Studio Portfolio" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe></div><div id="sec-quote"><iframe src="https://wavykhy.github.io/WAVIT-quote/?embedded=true" style="width: 100%; height: 85vh; min-height: 700px; max-height: 1200px; border: none; overflow: auto;" scrolling="auto"></iframe><br><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div id="sec-form"><b><font color="#666666">신청 기본 양식</font></b></div><div><br></div><div><div><div style="text-align: center; font-family: " "="" ""="" ;"=""><yt-formatted-string force-default-style="" style=""><font size="2" style="" color="#666666">업로드 채널</font></yt-formatted-string></div><div style="text-align: center; font-family: " "="" ""="" ;"=""><yt-formatted-string force-default-style="" style=""><font size="2" style="" color="#666666">사용 용도</font></yt-formatted-string></div><div style="text-align: center; font-family: " "="" ""="" ;"=""><font color="#666666" size="2">신청하실 곡 또는 오리지널 여부</font></div><div style="text-align: center; font-family: " "="" ""="" ;"=""><font size="2" style="" color="#666666">일러스트, 음원, 라인업 등의 자료</font></div></div><div style="text-align: center; font-family: " "="" ""="" ;"=""><font color="#666666" size="1">- Live2D가 적용된 일러스트는 mov 또는 png sequenece(fps 기재 필요)로 제출하시면 됩니다.</font></div><div style="text-align: center; font-family: " "="" ""="" ;"=""><font size="2" style="" color="#666666">마감일</font></div><div style="text-align: center; font-family: " "="" ""="" ;"=""><font size="2" style="" color="#666666">기타 요청사항 등</font></div><div><br></div><div><br></div><div id="sec-notice"><b><font color="#666666">신청 전 주의사항</font></b></div><div><b><font color="#666666"><br></font></b></div><div><span style="font-size: small;"><font color="#666666">· 업로드 시 라인업에 "<b>WAVIT_studio</b>"을 기재해주셔야 합니다.</font></span></div><div><span style="font-size: small;"><font color="#666666">· 곡의 난이도 및 분위기에 따라 작업이 거절될 수 있습니다.</font></span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;일러스트 및 믹싱본을 전달받기 전에는 작업을 시작하지 않습니다. - 선입금을 통한 예약은 가능합니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·&nbsp;</span><span style="color: rgb(102, 102, 102); font-size: small;">기본적으로 오마카세로만 받고 있습니다만, 의도하고자 하시는 장면이 있으시다면 문의바랍니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">· 영상의 개성이 다소 강합니다. 이는 제가 지향하고자 하는 바이며, 이를 감안하고 의뢰를 결정해주시면 감사하겠습니다.</span></div><div><div><font color="#666666" size="2">· 견적을 받으셨더라도 결제가 완료되어야 예약이 최종 확정됩니다. 결제가 지연될 경우 견적 및 일정이 변경될 수 있습니다.</font></div></div><div><img src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17823719220.gif" border="0" width="640"></div><div><div><font color="#666666" size="2">· 위처럼 다양한 연출을 위해 여러 효과를 중첩하여 사용합니다. 따라서 일러스트를 건네주실 때 미리 후처리 효과(color shift, noise 등)가 적용되어있지 않아야 합니다.</font></div><div><font color="#666666" size="2"><br></font></div><br></div><div><font color="#666666" size="2"><br></font></div><div><font color="#666666" size="2"><br></font></div><div id="sec-live2d"><div><font color="#666666"><b>3D 및 Live2D</b></font></div></div><div><font color="#666666"><b><br></b></font></div><div><div><span style="color: rgb(102, 102, 102); font-size: small;">·&nbsp;<b>3D</b>의 경우 곡에 따라 작가의 판단 하에&nbsp;<b>사용되지 않을 수</b>&nbsp;있습니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">· Live2D는 일반적인 2D와 입체감이 느껴지는 2.5D로 나뉩니다. 이는 일러스트의 작화에 따라 작가 판단 하에 결정됩니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;파츠분할 퀄리티에 따라 제 역량을 벗어나는 경우&nbsp;</span><span style="color: rgb(102, 102, 102); font-size: small;">Live2D 작업이 거절될 수 있습니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;Live2D 추가의 경우 통상적으로&nbsp;<b>작업 기간</b>이&nbsp;<b>5일 늘어</b>납니다.</span></div></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;Spine과 Cubism Live2D 양측 모두 작업 가능합니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;"><br></span></div><div><br></div><div id="sec-price"><div><b><font color="#666666">추가 금액</font></b></div><div><b><font color="#666666"><br></font></b></div><div><font size="2" color="#666666">· 기본&nbsp;<b>2인</b>을 초과하는 경우 (3인&nbsp;</font><span style="color: rgb(102, 102, 102); font-size: small;">→ 추가금 발생)</span></div><div><span style="font-size: small;"><font color="#666666">· 기본&nbsp;<b>4분</b>의 영상 길이를 초과하는 경우 (4:01 → 추가금 발생)</font></span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">· Live2D의 경우 기본적으로 파츠분리가 된 일러스트를 상정한 가격이며, 외의 경우에는 문의 부탁드립니다.</span></div></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><span style="color: rgb(102, 102, 102); font-size: small;">빠른 마감에 따른 추가금의 경우 작업 난이도 및 일정에 따라 금액 상이하니 문의 부탁드립니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">기타 요청사항 및 작업 난이도에 따라 추가금이 발생할 수 있으니 <b>반드시</b>&nbsp;<b>신청 전 문의</b>&nbsp;부탁드립니다.</font></div></div><div><font color="#666666" size="2"><br></font></div><div><font color="#666666" size="2"><br></font></div><div id="sec-terms"><div><font color="#666666"><b>사용 범위</b></font></div><div><b><font color="#666666"><br></font></b></div><div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">방송용은 유튜브, 스트리밍 등 업로드 목적의 사용을 의미하며 수익창출 여부와 관계없이 방송용으로 분류됩니다.</font></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">커버곡 PV는 일반적인 업로드 목적이라면 방송용으로 신청해 주세요.</font></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">오리지널 곡 PV, 앨범 홍보, 판매 프로모션 등 사업적 활용이 포함되는 경우에는 상업용 또는 별도 문의로 진행됩니다.</font></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">모든 작업물의 저작권은 별도 양도 계약이 없는 한 작가에게 귀속됩니다.</font></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">완성된 작업물은 작가의 포트폴리오 및 홍보 자료로 사용될 수 있으며, 비공개가 필요한 경우 신청 전 문의바랍니다.</font></div></div></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">제작 도중 의뢰가 중단되거나 취소되더라도, 해당 작업물은 제 포트폴리오에 활용될 수 있습니다.</font></div><div><font color="#666666" size="2"><br></font></div><div><span style="font-size: small;"><br></span></div><div><div><font color="#666666"><b>피드백</b></font></div><div><b><font color="#666666"><br></font></b></div><div><div><div><font color="#666666"><span style="font-size: small;">· 기본&nbsp;<b>3회</b>로 제한하고 있으며 요청사항에 따라 거절될 수 있습니다.</span><span style="font-size: small;">&nbsp;</span></font></div><div><font color="#666666"><span style="font-size: small;">·&nbsp;</span><span style="font-size: small;">오타 또는 오류 등의 피드백의 경우 횟수에 포함되지 않습니다.</span></font></div></div></div></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·&nbsp;</span><font color="#666666" size="2">1차 완성본 전달 후 의뢰자님께서 확인 및 피드백을 주시는 대기 시간, 그리고 해당 피드백을 반영하여 제가 수정 작업을 진행하는 기간은 기존 14일의 작업 기간에서 제외됩니다.</font></div></div>
+    </main>
+
+    <!-- [우측 커스텀 메뉴 영역] -->
+    <aside class="artmug-side-menu-wrapper">
+      <div class="artmug-side-menu">
+        
+        <!-- 상단 읽기 진행률 프로그레스 바 -->
+        <div class="wm-progress-wrapper">
+          <div class="wm-progress-bar" id="wmProgressBar"></div>
+        </div>
+
+        <!-- 브랜드 헤더 & 실시간 디스코드 상태 배지 & 호버 툴팁 -->
+        <div class="wm-header">
+          <div class="wm-title">WAVIT STUDIO</div>
+          <div class="wm-status-wrapper">
+            <div class="wm-status is-online" id="wmStatusBadge">
+              <span class="wm-status-sq"></span>
+              <span id="wmStatusText">ONLINE</span>
+            </div>
+            <div class="wm-status-tooltip" id="wmStatusTooltip">현재 바로 답변 가능합니다</div>
+          </div>
+        </div>
+
+        <!-- 빠른 이동 목차 (3개 항목) -->
+        <div class="wm-section-label">Quick Navigation</div>
+        <ul class="wm-nav-list">
+          <li class="wm-nav-item">
+            <button type="button" onclick="wmScrollTo('sec-schedule')">
+              <span>작업 일정</span>
+              <span class="wm-nav-arrow">&rarr;</span>
+            </button>
+          </li>
+          <li class="wm-nav-item">
+            <button type="button" onclick="wmScrollTo('sec-portfolio')">
+              <span>포트폴리오</span>
+              <span class="wm-nav-arrow">&rarr;</span>
+            </button>
+          </li>
+          <li class="wm-nav-item">
+            <button type="button" onclick="wmScrollTo('sec-quote')">
+              <span>견적 계산기</span>
+              <span class="wm-nav-arrow">&rarr;</span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- 맨 위로 이동 -->
+        <button type="button" class="wm-top-btn" onclick="wmScrollToTop()">TOP</button>
       </div>
-      <div class="wm-status-tooltip" id="wmStatusTooltip">답변까지 다소 시간이 소요될 수 있습니다.</div>
-    </div>
+    </aside>
+
   </div>
 
-  <!-- 목차 (5개 항목) -->
-  <div class="wm-section-label">Quick Navigation</div>
-  <ul class="wm-nav-list">
-    <li class="wm-nav-item">
-      <button type="button" onclick="wmScrollTo('sec-preview')">
-        <span>미리보기</span>
-        <span class="wm-nav-arrow">&rarr;</span>
-      </button>
-    </li>
-    <li class="wm-nav-item">
-      <button type="button" onclick="wmScrollTo('sec-schedule')">
-        <span>작업 일정</span>
-        <span class="wm-nav-arrow">&rarr;</span>
-      </button>
-    </li>
-    <li class="wm-nav-item">
-      <button type="button" onclick="wmScrollTo('sec-portfolio')">
-        <span>포트폴리오</span>
-        <span class="wm-nav-arrow">&rarr;</span>
-      </button>
-    </li>
-    <li class="wm-nav-item">
-      <button type="button" onclick="wmScrollTo('sec-quote')">
-        <span>견적 계산기</span>
-        <span class="wm-nav-arrow">&rarr;</span>
-      </button>
-    </li>
-    <li class="wm-nav-item">
-      <button type="button" onclick="wmScrollTo('sec-notice')">
-        <span>주의사항</span>
-        <span class="wm-nav-arrow">&rarr;</span>
-      </button>
-    </li>
-  </ul>
-
-  <!-- 맨 위로 이동 -->
-  <button type="button" class="wm-top-btn" onclick="wmScrollToTop()">TOP</button>
-</div>
-
-<script>
+  <script>
   // 아트머그 공식 '상세설명 더보기' (.btn_open_btn, .detailinfo.showstep1) 강제 자동 펼침 함수
   function wmExpandArtmugContent() {
     try {
@@ -4436,7 +3893,7 @@ function loading(sec){
         btnOpen.click();
       }
 
-      // 2. detailinfo 박스 showstep1 클래스 해제 및 높이 제한 해제
+      // 2. detailinfo 박스의 showstep1 클래스 직접 제거 및 높이 무제한 해제
       const detailInfo = document.querySelector('.detailinfo');
       if (detailInfo) {
         detailInfo.classList.remove('showstep1');
@@ -4445,11 +3902,22 @@ function loading(sec){
         detailInfo.style.overflow = 'visible';
       }
 
-      // 3. 더보기 버튼 래퍼 숨김
+      // 3. 더보기 버튼 영역 숨김
       const btnOpenWrap = document.querySelector('.btn_open');
       if (btnOpenWrap) {
         btnOpenWrap.classList.add('hide');
         btnOpenWrap.style.display = 'none';
+      }
+
+      // 4. 범용 텍스트 탐색 폴백 (ol, button, a, div, span)
+      const candidates = document.querySelectorAll('.btn_open_btn, .btn_open, ol, button, a, div, span');
+      for (let i = 0; i < candidates.length; i++) {
+        const txt = (candidates[i].textContent || '').trim();
+        if (txt.includes('상세설명') || txt.includes('더보기') || txt.includes('내용 더 보기') || txt.includes('펼쳐보기')) {
+          if (typeof candidates[i].click === 'function') {
+            candidates[i].click();
+          }
+        }
       }
     } catch (e) {}
   }
@@ -4469,45 +3937,13 @@ function loading(sec){
         }
       });
 
-      // 0.2초 대기 후 타깃 검색 및 스크롤 이동
+      // 0.25초 지연 대기 후 절대 Y 좌표로 윈도우 스크롤 이동
       setTimeout(() => {
-        // 1순위: 직접 지정한 ID 태그 탐색
         let targetEl = document.getElementById(targetId);
-
-        // 2순위: ID가 없을 경우 스마트 대체 탐색 (Fallback)
         if (!targetEl) {
-          if (targetId === 'sec-preview') {
-            targetEl = document.querySelector('.showcontent iframe[src*="cloudinary"]') ||
-                       document.querySelector('.showcontent iframe') ||
-                       document.querySelector('.showcontent > div') ||
-                       document.querySelector('.showcontent');
-          }
-          else if (targetId === 'sec-schedule') {
-            targetEl = document.querySelector('iframe[src*="schedule"]');
-          }
-          else if (targetId === 'sec-portfolio') {
-            targetEl = document.querySelector('iframe[src*="sharp_embed"]');
-          }
-          else if (targetId === 'sec-quote') {
-            targetEl = document.querySelector('iframe[src*="WAVIT-quote"]');
-          }
-          else if (targetId === 'sec-notice') {
-            const contentArea = document.querySelector('.showcontent') || document.body;
-            const candidates = contentArea.querySelectorAll('b, font, span, p, div');
-            let bestEl = null;
-            let minLength = Infinity;
-            for (let i = 0; i < candidates.length; i++) {
-              if (candidates[i].closest('.artmug-side-menu')) continue;
-              const text = (candidates[i].textContent || '').trim();
-              if (text.includes('신청 전 주의사항') || text.includes('주의사항')) {
-                if (text.length < minLength) {
-                  minLength = text.length;
-                  bestEl = candidates[i];
-                }
-              }
-            }
-            targetEl = bestEl;
-          }
+          if (targetId === 'sec-schedule') targetEl = document.querySelector('iframe[src*="schedule"]');
+          else if (targetId === 'sec-portfolio') targetEl = document.querySelector('iframe[src*="sharp_embed"]');
+          else if (targetId === 'sec-quote') targetEl = document.querySelector('iframe[src*="WAVIT-quote"]');
         }
 
         if (targetEl) {
@@ -4517,24 +3953,11 @@ function loading(sec){
             p = p.parentElement;
           }
 
-          const scrollToTarget = () => {
-            const rect = targetEl.getBoundingClientRect();
-            const absoluteY = rect.top + window.pageYOffset - 80;
-            window.scrollTo({ top: Math.max(0, absoluteY), behavior: 'smooth' });
-          };
-
-          // 1차 부드러운 스크롤 이동
-          scrollToTarget();
-
-          // 2차 지연 로딩 이미지/비디오로 인한 레이아웃 높이 변화 보정 (350ms 후 미세 보정)
-          setTimeout(() => {
-            const checkRect = targetEl.getBoundingClientRect();
-            if (Math.abs(checkRect.top - 80) > 15) {
-              scrollToTarget();
-            }
-          }, 350);
+          const rect = targetEl.getBoundingClientRect();
+          const absoluteY = rect.top + window.pageYOffset - 80;
+          window.scrollTo({ top: Math.max(0, absoluteY), behavior: 'smooth' });
         }
-      }, 200);
+      }, 250);
     } catch (e) {}
   }
 
@@ -4544,19 +3967,53 @@ function loading(sec){
     } catch (e) {}
   }
 
-  // 상단 읽기 진행률 프로그레스 바 스크롤 감지
-  window.addEventListener('scroll', function() {
-    try {
-      const pBar = document.getElementById('wmProgressBar');
-      if (pBar) {
-        const total = document.documentElement.scrollHeight - window.innerHeight;
-        if (total > 0) {
-          const pct = (window.scrollY / total) * 100;
-          pBar.style.width = Math.min(100, Math.max(0, pct)) + '%';
-        }
+  (function() {
+    let menuEl = null;
+    let initialOffsetTop = 0;
+
+    function initMenuFollower() {
+      menuEl = document.querySelector('.artmug-side-menu');
+      if (!menuEl) return;
+
+      if (menuEl.parentElement) {
+        menuEl.parentElement.style.overflow = 'visible';
+        menuEl.parentElement.style.height = 'auto';
       }
-    } catch (e) {}
-  }, { passive: true });
+
+      const rect = menuEl.getBoundingClientRect();
+      initialOffsetTop = rect.top + window.scrollY;
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    function handleScroll() {
+      if (!menuEl) return;
+      try {
+        const pBar = document.getElementById('wmProgressBar');
+        if (pBar) {
+          const total = document.documentElement.scrollHeight - window.innerHeight;
+          if (total > 0) {
+            const pct = (window.scrollY / total) * 100;
+            pBar.style.width = Math.min(100, Math.max(0, pct)) + '%';
+          }
+        }
+
+        const currentY = window.scrollY;
+        if (currentY > (initialOffsetTop - 80)) {
+          const moveY = currentY - initialOffsetTop + 80;
+          menuEl.style.transform = 'translateY(' + moveY + 'px)';
+        } else {
+          menuEl.style.transform = 'translateY(0px)';
+        }
+      } catch (e) {}
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMenuFollower);
+    } else {
+      initMenuFollower();
+    }
+  })();
 
   (function() {
     const DISCORD_USER_ID = "680023951157624875";
@@ -4564,18 +4021,22 @@ function loading(sec){
     function updateOnlineStatus(statusType) {
       const badge = document.getElementById('wmStatusBadge');
       const text = document.getElementById('wmStatusText');
+      const tooltip = document.getElementById('wmStatusTooltip');
       if (!badge || !text) return;
       
       badge.className = 'wm-status';
       if (statusType === 'online') {
         badge.classList.add('is-online');
         text.textContent = 'ONLINE';
+        if (tooltip) tooltip.textContent = '현재 바로 답변 가능합니다';
       } else if (statusType === 'idle' || statusType === 'dnd') {
         badge.classList.add('is-idle');
         text.textContent = 'AWAY';
+        if (tooltip) tooltip.textContent = '답변에 잠시 시간이 소요됩니다';
       } else {
         badge.classList.add('is-offline');
         text.textContent = 'OFFLINE';
+        if (tooltip) tooltip.textContent = '문의를 남겨두시면 최대한 빠르게 답변드리겠습니다';
       }
     }
 
@@ -4591,566 +4052,5 @@ function loading(sec){
     }
   })();
 </script>
-
-</div>
-<div id="detailViews">
-	
-	<div class="detailinfo showstep1">
-		<div class="showcontent"><div id="sec-preview"></div><div style="position: relative; width: 100%; max-width: 640px; aspect-ratio: 16 / 9; margin: 0 auto; overflow: hidden;"><iframe src="https://player.cloudinary.com/embed/?cloud_name=ddaeo1gux&amp;public_id=mp4_portf_pezygo&amp;source%5Bsource_types%5D%5B0%5D=auto&amp;source%5Btransformation%5D%5Bwidth%5D=640&amp;source%5Btransformation%5D%5Bcrop%5D=limit&amp;source%5Btransformation%5D%5Bquality%5D=auto&amp;player%5Bautoplay_mode%5D=on-scroll&amp;player%5Bloop%5D=true&amp;player%5Bmuted%5D=true&amp;player%5Bplaysinline%5D=true&amp;player%5BbigPlayButton%5D=false&amp;player%5Bcontrols%5D=false&amp;player%5BaspectRatio%5D=16%3A9" title="Portfolio video" loading="lazy" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div style="position: relative; width: 100%; max-width: 640px; aspect-ratio: 16 / 9; margin: 0 auto; overflow: hidden;"><iframe src="https://player.cloudinary.com/embed/?cloud_name=ddaeo1gux&amp;public_id=gif_cnr72u&amp;source%5Bsource_types%5D%5B0%5D=auto&amp;source%5Btransformation%5D%5Bwidth%5D=640&amp;source%5Btransformation%5D%5Bcrop%5D=limit&amp;source%5Btransformation%5D%5Bquality%5D=auto&amp;player%5Bautoplay_mode%5D=on-scroll&amp;player%5Bloop%5D=true&amp;player%5Bmuted%5D=true&amp;player%5Bplaysinline%5D=true&amp;player%5BbigPlayButton%5D=false&amp;player%5Bcontrols%5D=false&amp;player%5BaspectRatio%5D=16%3A9" title="Portfolio video" loading="lazy" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><img loading='lazy' title='WAVIT_studio 작가 - 아트머그 - PV / Live2D' alt='WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피' src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17852640420.gif" border="0" width="640"><br><img loading='lazy' title='WAVIT_studio 작가 - 아트머그 - PV / Live2D' alt='WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피' src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17804794770.gif" border="0" width="640"><br><div><img loading='lazy' title='WAVIT_studio 작가 - 아트머그 - PV / Live2D' alt='WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피' src="https://i.postimg.cc/XYzz2SSr/artmug-2d-2-1-1.gif" alt="gif image"></div><div style="position: relative; width: 100%; max-width: 640px; aspect-ratio: 16 / 9; margin: 0 auto; overflow: hidden;"><iframe src="https://player.cloudinary.com/embed/?cloud_name=ddaeo1gux&amp;public_id=tenco_%EC%B2%AD%EC%B6%98%EC%9D%98%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B8%8C_wxx4b2&amp;source%5Bsource_types%5D%5B0%5D=auto&amp;source%5Btransformation%5D%5Bwidth%5D=640&amp;source%5Btransformation%5D%5Bcrop%5D=limit&amp;source%5Btransformation%5D%5Bquality%5D=auto&amp;player%5Bautoplay_mode%5D=on-scroll&amp;player%5Bloop%5D=true&amp;player%5Bmuted%5D=true&amp;player%5Bplaysinline%5D=true&amp;player%5BbigPlayButton%5D=false&amp;player%5Bcontrols%5D=false&amp;player%5BaspectRatio%5D=16%3A9" title="Tenco 청춘의 아카이브 video" loading="lazy" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div><img loading='lazy' title='WAVIT_studio 작가 - 아트머그 - PV / Live2D' alt='WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피' src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17820999920.gif" border="0" width="640"><br><img loading='lazy' title='WAVIT_studio 작가 - 아트머그 - PV / Live2D' alt='WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피' src="https://i.postimg.cc/QxVgfBXQ/artmug-2d-2-1-1-1.gif" alt="gif image"><br><img loading='lazy' title='WAVIT_studio 작가 - 아트머그 - PV / Live2D' alt='WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피' src="https://i.postimg.cc/bvY12dFQ/artmug-2d-2.gif" alt="gif image"><br><img loading='lazy' title='WAVIT_studio 작가 - 아트머그 - PV / Live2D' alt='WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피' src="https://i.postimg.cc/wBbRy2mZ/artmug-3d.gif" alt="gif image"></div><div><img loading='lazy' title='WAVIT_studio 작가 - 아트머그 - PV / Live2D' alt='WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피' src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17819358150.gif" border="0" width="640"><br></div><div><img loading='lazy' title='WAVIT_studio 작가 - 아트머그 - PV / Live2D' alt='WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피' src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17804794880.gif" border="0" width="640"><br><img loading='lazy' title='WAVIT_studio 작가 - 아트머그 - PV / Live2D' alt='WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피' src="https://i.postimg.cc/RVctswkh/artmug-l2d.gif" alt="gif image"><div style="position: relative; width: 100%; max-width: 640px; aspect-ratio: 2578 / 1080; margin: 0 auto; overflow: hidden;"><iframe src="https://player.cloudinary.com/embed/?cloud_name=ddaeo1gux&amp;public_id=AERU_PLAY_znp7mm&amp;source%5Bsource_types%5D%5B0%5D=auto&amp;source%5Btransformation%5D%5Bwidth%5D=640&amp;source%5Btransformation%5D%5Bcrop%5D=limit&amp;source%5Btransformation%5D%5Bquality%5D=auto&amp;player%5Bautoplay_mode%5D=on-scroll&amp;player%5Bloop%5D=true&amp;player%5Bmuted%5D=true&amp;player%5Bplaysinline%5D=true&amp;player%5BbigPlayButton%5D=false&amp;player%5Bcontrols%5D=false&amp;player%5BaspectRatio%5D=2578%3A1080" title="AERU PLAY video" loading="lazy" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><div><br></div><div><br></div><div><br></div><div>기본적인 모션그래픽 이외에도 <b>3D</b>, <b>Live2D</b> 등 다양한 스킬을 MV 제작에 활용하고 있습니다.</div><div>특히 Live2D에서는 귀엽고 통통튀는 그림체와 입체감이 느껴지는 2.5D를 포함하여 폭넓게 다루고 있습니다.</div><div><font size="2"><br></font></div><div>최종적으로 의뢰를 하지 않더라도 궁금한 점이 있으시다면 언제든 편하게 문의 주시길 바랍니다.!</div><div><br></div><div><hr id="null"><br></div><div><br></div><div><br></div><div><br></div><div><iframe src="https://schedule-tracker-five.vercel.app" width="100%" height="1100px" style="border: none; border-radius: 8px;" allowfullscreen></iframe></div><div><br></div><div>MV 카피 의뢰의 경우 곡에 따라 기간이 상이하니 문의 부탁드립니다.</div><div><br></div><div><iframe src="https://wavykhy.github.io/WAVIT_studio_2/sharp_embed.html" width="100%" style="border: none; border-radius: 4px; width: 100%; height: 80vh; max-height: 900px; overflow-y: auto;" title="WAVIT Studio Portfolio" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe></div><div><iframe src="https://wavykhy.github.io/WAVIT-quote/?embedded=true" style="width: 100%; height: 85vh; min-height: 1800px; max-height: 2200px; border: none; overflow: auto;" scrolling="auto"></iframe><br><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><b><font color="#666666">신청 기본 양식</font></b></div><div><br></div><div><div><div style="text-align: center;     font-family: " " "" ;"><yt-formatted-string force-default-style style><font size="2" style color="#666666">업로드 채널</font></yt-formatted-string></div><div style="text-align: center;     font-family: " " "" ;"><yt-formatted-string force-default-style style><font size="2" style color="#666666">사용 용도</font></yt-formatted-string></div><div style="text-align: center;     font-family: " " "" ;"><font color="#666666" size="2">신청하실 곡 또는 오리지널 여부</font></div><div style="text-align: center;     font-family: " " "" ;"><font size="2" style color="#666666">일러스트, 음원, 라인업 등의 자료</font></div></div><div style="text-align: center;     font-family: " " "" ;"><font color="#666666" size="1">- Live2D가 적용된 일러스트는 mov 또는 png sequenece(fps 기재 필요)로 제출하시면 됩니다.</font></div><div style="text-align: center;     font-family: " " "" ;"><font size="2" style color="#666666">마감일</font></div><div style="text-align: center;     font-family: " " "" ;"><font size="2" style color="#666666">기타 요청사항 등</font></div><div><br></div><div><br></div><div><div id="sec-notice"></div><b><font color="#666666">신청 전 주의사항</font></b></div><div><b><font color="#666666"><br></font></b></div><div><span style="font-size: small;"><font color="#666666">· 업로드 시 라인업에 "<b>WAVIT_studio</b>"을 기재해주셔야 합니다.</font></span></div><div><span style="font-size: small;"><font color="#666666">· 곡의 난이도 및 분위기에 따라 작업이 거절될 수 있습니다.</font></span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;일러스트 및 믹싱본을 전달받기 전에는 작업을 시작하지 않습니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·&nbsp;</span><span style="color: rgb(102, 102, 102); font-size: small;">기본적으로 오마카세로만 받고 있습니다만, 의도하고자 하시는 장면이 있으시다면 문의바랍니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">· 영상의 개성이 다소 강합니다. 이는 제가 지향하고자 하는 바이며, 이를 감안하고 의뢰를 결정해주시길 바랍니다.</span></div><div><img loading='lazy' title='WAVIT_studio 작가 - 아트머그 - PV / Live2D' alt='WAVIT_studio 작가 - 아트머그 - PV / Live2D  #커버곡 #PV #모션그래픽 #오리지널곡 #리깅 #live2d #카피' src="https://artmugfile3.cafe24.com/image/up_img/detail/5/goods_58709/17823719220.gif" border="0" width="640"></div><div><div><font color="#666666" size="2">· 위처럼 다양한 연출을 위해 여러 효과를 중첩하여 사용합니다. 따라서 일러스트를 건네주실 때 미리 후처리 효과(color shift, noise 등)가 적용되어있지 않아야 합니다.</font></div><div><font color="#666666" size="2"><br></font></div><br></div><div><font color="#666666" size="2"><br></font></div><div><font color="#666666" size="2"><br></font></div><div><div><font color="#666666"><b>3D 및 Live2D</b></font></div></div><div><font color="#666666"><b><br></b></font></div><div><div><span style="color: rgb(102, 102, 102); font-size: small;">·&nbsp;<b>3D</b>의 경우 곡에 따라 작가의 판단 하에&nbsp;<b>사용되지 않을 수</b>&nbsp;있습니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;파츠분할 퀄리티에 따라 제 역량을 벗어나는 경우&nbsp;</span><span style="color: rgb(102, 102, 102); font-size: small;">Live2D 작업이 거절될 수 있습니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;Live2D 추가의 경우 통상적으로&nbsp;<b>작업 기간</b>이&nbsp;<b>5일 늘어</b>납니다.</span></div></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;Spine과 Cubism Live2D 양측 모두 작업 가능합니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;"><br></span></div><div><br></div><div><div><b><font color="#666666">추가 금액</font></b></div><div><b><font color="#666666"><br></font></b></div><div><font size="2" color="#666666">· 기본&nbsp;<b>2인</b>을 초과하는 경우 (3인&nbsp;</font><span style="color: rgb(102, 102, 102); font-size: small;">→ 추가금 발생)</span></div><div><span style="font-size: small;"><font color="#666666">· 기본&nbsp;<b>4분</b>의 영상 길이를 초과하는 경우 (4:01 → 추가금 발생)</font></span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">· Live2D의 경우 기본적으로 파츠분리가 된 일러스트를 상정한 가격이며, 외의 경우에는 문의 부탁드립니다.</span></div></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><span style="color: rgb(102, 102, 102); font-size: small;">빠른 마감에 따른 추가금의 경우 작업 난이도 및 일정에 따라 금액 상이하니 문의 부탁드립니다.</span></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">기타 요청사항 및 작업 난이도에 따라 추가금이 발생할 수 있으니 <b>반드시</b>&nbsp;<b>신청 전 문의</b>&nbsp;부탁드립니다.</font></div></div><div><font color="#666666" size="2"><br></font></div><div><font color="#666666" size="2"><br></font></div><div><div><font color="#666666"><b>사용 범위</b></font></div><div><b><font color="#666666"><br></font></b></div><div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">방송용은 유튜브, 스트리밍 등 업로드 목적의 사용을 의미하며 수익창출 여부와 관계없이 방송용으로 분류됩니다.</font></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">커버곡 PV는 일반적인 업로드 목적이라면 방송용으로 신청해 주세요.</font></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">오리지널 곡 PV, 앨범 홍보, 판매 프로모션 등 사업적 활용이 포함되는 경우에는 상업용 또는 별도 문의로 진행됩니다.</font></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">모든 작업물의 저작권은 별도 양도 계약이 없는 한 작가에게 귀속됩니다.</font></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">완성된 작업물은 작가의 포트폴리오 및 홍보 자료로 사용될 수 있으며, 비공개가 필요한 경우 신청 전 문의바랍니다.</font></div></div></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·</span><span style="color: rgb(102, 102, 102); font-size: small;">&nbsp;</span><font color="#666666" size="2">제작 도중 의뢰가 중단되거나 취소되더라도, 해당 작업물은 제 포트폴리오에 활용될 수 있습니다.</font></div><div><font color="#666666" size="2"><br></font></div><div><span style="font-size: small;"><br></span></div><div><div><font color="#666666"><b>피드백</b></font></div><div><b><font color="#666666"><br></font></b></div><div><div><div><font color="#666666"><span style="font-size: small;">· 기본&nbsp;<b>3회</b>로 제한하고 있으며 요청사항에 따라 거절될 수 있습니다.</span><span style="font-size: small;">&nbsp;</span></font></div><div><font color="#666666"><span style="font-size: small;">·&nbsp;</span><span style="font-size: small;">오타 또는 오류 등의 피드백의 경우 횟수에 포함되지 않습니다.</span></font></div></div></div></div><div><span style="color: rgb(102, 102, 102); font-size: small;">·&nbsp;</span><font color="#666666" size="2">1차 완성본 전달 후 의뢰자님께서 확인 및 피드백을 주시는 대기 시간, 그리고 해당 피드백을 반영하여 제가 수정 작업을 진행하는 기간은 기존 작업 기간에서 제외됩니다.</font></div></div></div>
-	</div>
-	<div class="btn_open">
-		<ol class="btn_open_btn">내용 더 보기&ensp;<i class="fa fa-chevron-down" style="margin-top: -6px; "></i></ol>
-	</div>
-	
-
-	
-	<ul class="s_title" style="margin:120px 0 60px 0">작가의 환불 정책</ul>
-	작업 시작 전 환불할 경우 : 90%<br />
-
-작업 시작 이후 환불할 경우 : 30%<br />
-
-1차 완성본 전달 이후 : 0%
-	
-	<ul class="tcenter" style="padding-top:150px;"><i class="fa fa-tag" style="margin:-2px 0 0 0; font-size:18px"></i>&nbsp;&nbsp;#커버곡&nbsp;&nbsp;#PV&nbsp;&nbsp;#모션그래픽&nbsp;&nbsp;#오리지널곡&nbsp;&nbsp;#리깅&nbsp;&nbsp;#live2d&nbsp;&nbsp;#카피</ul>
-	<ul class="caution bold"><i class="fa fa-exclamation-circle" id="help_left"></i>이용 순서 :&nbsp;&nbsp;문의(견적, 일정 확인)  → 주문 → 입금 → 작업 → 수령완료</ul>
-	<ul class="caution bold"><a href="index.php?channel=doc_guide2"><i class="fa fa-exclamation-circle" id="help_left"></i>환불 규정 및 의뢰자 유의사항</a></ul>
-	<ul class="caution orange bold" ><a onclick="load_sim_guide(); window.scrollTo(0,0);"><i class="fa fa-exclamation-circle" id="help_left"></i>간편 이용안내 (결제 안내. 필독)</a></ul>
-	<ul class="tcenter fsize12 gray" style="padding-top:53px;">※ 모든 이미지는 저작권이 있는 이미지입니다. 무단 도용 및 복제를 금합니다.</ul>
-</div>
-
-<script type="text/javascript">
-/******************* 더보기 *************************/
-document.addEventListener('DOMContentLoaded', function(){ //DOM 생성 후 이벤트 리스너 등록
-	//더보기 버튼 이벤트 리스너
-	document.querySelector('.btn_open_btn').addEventListener('click', function(e){
-		
-		let classList = document.querySelector('.detailinfo').classList; // 더보기 프레임의 클래스 정보 얻기
-		let contentHeight = document.querySelector('.detailinfo > .showcontent').offsetHeight; //컨텐츠 높이 얻기
-
-		// 1단계이면 2단계로
-		if(classList.contains('showstep1')){
-			classList.remove('showstep1');
-		}
-		//전체보기시 더보기 버튼 감추기 & 감추기 버튼 표시
-		if(!classList.contains('showstep1') ){
-			e.target.classList.add('hide');
-			// document.querySelector('.btn_close').classList.remove('hide');
-		}
-	});
-});
-
-//컨텐츠 로딩 완료 후 높이 기준으로 클래스 재처리
-window.addEventListener('load', function(){
-	let contentHeight = document.querySelector('.detailinfo > .showcontent').offsetHeight; //컨텐츠 높이 얻기
-	if(contentHeight <= 3000){
-		document.querySelector('.detailinfo').classList.remove('showstep1'); // 초기값보다 작으면 전체 컨텐츠 표시
-		document.querySelector('.btn_open').classList.add('hide'); // 버튼 감춤
-	}
-});
-
-/******************* 더보기 *************************/
-</script>
-
-
-
-
-<div class="siteWidth" style="padding:200px 0">
-
-	<!--===================================== 문의 ======================================-->
-	<div id="cont_qna" class="cf">
-		<div id="ankerQ" style="margin-bottom: 20px"></div>
-		<div class="s_title left">문의 및 답변</div><div class="left fsize13 noticeIcon_o orange" style="margin:9px 0 0 30px; height:15px;">글을 작성하시면 실시간으로 알림 메시지가 발송됩니다</div>	
-		<div class="sBtn1 right" style="margin-top:20px; width:160px" onclick="pLightBox.show('php/qna_write.php?number=58709','iframe_w','1080','500','문의하기','0'); qnaAlert(); return false;">작가에게 문의하기	</div>
-		
-		<ul class="answer_per" style="margin-top:20px;">문의 답변율 <font class="lsp0">100 %</font></ul>
-		
-		<div class="blank" style="height:20px;">&nbsp;</div>
-
-			<table cellspacing="0" cellpadding="0" border="0" width="100%">	
-			<thead>
-			<thead>
-			<tr height="28" align="center">
-				<th scope="col" class="listTh">문의 내용</th>
-			</tr>
-			</thead>
-			
-			<tbody id="list_qna"></tbody>
-			</table>
-		
-		
-
-		<div id="paging2" ></div>
-		
-		<div style="height:20px">&nbsp;</div>
-
-	</div>
-	   
-	<!--============================== 후기 ====================================-->
-	
-	<div id="cont_after" class="cf">
-		<div id="ankerA"></div>
-		<div class="blank" style="height:95px;">&nbsp;</div>
-		<div class="s_title">이용 후기</div>
-		<div class="right fsize12 gray" >
-			후기는 <a href="index.php?channel=order" ><font class="gray">'마이페이지 > 주문관리'</font></a>에서 작성하실 수 있습니다.
-		</div>
-		<div class="blank" style="height:20px;">&nbsp;</div>
-			<table cellspacing="0" cellpadding="0" border="0" width="100%">			
-			<col width="90" /> 
-			<col width="168" />
-			<col />
-			<col width="144" /> 
-			<col width="88" />
-			<col width="20" /> 				
-			<thead>
-			<tr height="28" align="center">
-				<th scope="col" class="listTh">번호</th>
-				<th scope="col" class="listTh tleft" style="padding-left:13px">평점</th>
-				<th scope="col" class="listTh tleft">내용</th>
-				<th scope="col" class="listTh">작성자</th>
-				<th scope="col" class="listTh">작성일</th>
-				<th scope="col" class="listTh">&nbsp;</th>
-			</tr>
-			</thead>
-			
-			<tbody id="list_after"></tbody>			
-			</table>
-		
-		
-
-		<div id="paging3" ></div>
-	</div>
-
-</div><!-- subContent end -->
-<div id="imgPop"></div>
-
-<div id="rightClick" class="hidden" style="display:none"></div>
-<script type="text/javascript">
-<!--
-
-/******************* 질문과 답변 *************************/
-
-function rtnRowQna(obj,name,title,date,link) {		
-	var secret_icon='';
-
-	/************* 질문 **************/
-	var newRow = document.createElement('TR');			
-	var newCell = document.createElement('TD');	
-	newCell.className = "qcontent";
-
-	var titleHtml = '<dl class="title" ><a>'+title+'</a></dl>';
-	secret_icon ="<i class='fa fa-lock' style='color:#949494' title='비밀글'></i>&nbsp;&nbsp;";
-
-	var qcontent = '<div class="left">\
-					<ol class="click_box left_dl cf" onclick="location.href=\''+link+'\'"><dl class="name">'+secret_icon+name+'</dl>'+titleHtml+'</ol>\
-				</div>\
-				<dl class="date">'+date+'</dl>';
-	
-	newCell.innerHTML = qcontent ;
-	newRow.appendChild(newCell);	
-	obj.appendChild(newRow);	
-	/************* 질문 **************/
-
-	newRow = document.createElement('TR');			
-	newCell = document.createElement('TD');	
-	newCell.colSpan = 5;
-	newCell.innerHTML = '<div class="line_bottom"></div>';
-	newRow.appendChild(newCell);
-	obj.appendChild(newRow);
-}
-
-/******************* 이용후기 *************************************************************************/
-
-function rtnRowAfter(obj,num,point,title,name,date,content,mod,uid,r_content,r_name,r_date,r_uid,r_title) {	
-	var btn_rep = btn_del=  replyContent = '';
-
-	newRow = document.createElement('TR');			
-	if(!r_uid) newRow.style.height = "70px";
-	else newRow.style.height = "100px";
-	newRow.align = "center";
-	
-	newCell = document.createElement('TD');	
-	newCell.innerHTML = '<font>'+num+'</font>';
-	newRow.appendChild(newCell);	
-
-	newCell = document.createElement('TD');	
-	newCell.align = "left";
-	if(point > -1) newCell.innerHTML = '<div class="starBg" style="margin:-2px 0 0 13px;"><div style="width:'+point+'%;overflow:hidden"><img src="skin/default/img/shop/icon_star.gif" /></div></div>';
-	else newCell.innerHTML ='';
-	newRow.appendChild(newCell);
-
-	newCell = document.createElement('TD');	
-	newCell.align = "left";
-	newCell.onclick = function() { viewAfter(num) }
-	newCell.style.cursor = "pointer";
-	newCell.style.padding = "4px 0 4px 0";
-	newCell.className = "";
-	newCell.innerHTML = title;
-	if(r_uid) newCell.innerHTML += '<div style="margin:10px 0 0 6px"><img src="skin/default/img/common/icon_reply2.png">&emsp;<b>'+r_name+'</b>&emsp;'+r_title+'</div>';;
-	newRow.appendChild(newCell);	
-
-	newCell = document.createElement('TD');	
-	newCell.style.padding = "4px 0 0 44px";
-	newCell.className = "lsp0 date tleft";
-	newCell.innerHTML = name;
-	newRow.appendChild(newCell);	
-
-	if(mod==1) {
-		tmps = '<ul>\
-				<a href="#." onclick="pLightBox.show(\'php/after_write.php?pmode=confirm&amp;uid='+uid+'&number=58709\',\'iframe\',\'940\',\'150\',\'비밀번호 확인\',\'20\');return false;"><span>수정</span></a>\
-				<span style="margin-right:12px"></span>\
-				<a href="#." onclick="pLightBox.show(\'php/after_write.php?pmode=delete&amp;uid='+uid+'\',\'iframe\',\'400\',\'150\',\'이용후기 삭제\',\'20\');return false;"><span >삭제</span></a>\
-				</ul>\
-				';
-	} 
-	else tmps = '';
-
-	
-
-	if(!r_uid)	replyContent = btn_rep;
-	else replyContent = '<div class="clear"></div><div class ="replyContent cf"><ul><img src="skin/default/img/common/icon_reply2.png"></ul><ul><ol class="name">'+r_name+'</ol><ol class="cont">'+r_content+'</ol></ul><ul class="right">'+ btn_del+'</ul></div>';
-	
-
-	newCell = document.createElement('TD');	
-	newCell.innerHTML = '<font class="date">'+date+'</font>';
-	newRow.appendChild(newCell);		
-
-	newCell = document.createElement('TD');	
-	newRow.appendChild(newCell);	
-	obj.appendChild(newRow);	
-
-	newRow = document.createElement('TR');				
-	newCell = document.createElement('TD');	
-	newCell.colSpan = 6;	
-	
-	newCell.innerHTML = '<div style="border-top:1px solid #efefef; display:none;" id="after_'+num+'"><div class="arterContent cf" id="afterContent'+num+'" ><ul>'+content+'</ul>'+ tmps + replyContent +'</div></div>';
-	
-	newRow.appendChild(newCell);
-	obj.appendChild(newRow);
-
-	newRow = document.createElement('TR');			
-	newCell = document.createElement('TD');	
-	newCell.colSpan = 6;
-	newCell.style.height = 1;
-	newCell.style.backgroundColor = "#dadada";
-	newCell.innerHTML = "<img src='" + shop_skin + "/img/common/blank.gif' width=1 height=1 alt='blank' />";;
-	newRow.appendChild(newCell);
-	obj.appendChild(newRow);
-
-	imgSizeConv("afterContent"+num,600);
-}
-
-function del_reply(r_uid){
-
-	if (confirm("댓글을 삭제하시겠습니까?")) {
-		HFrm.location.href = 'php/after_reply_ok.php?pmode=delete&uid='+r_uid;
-
-	} 
-
-
-}
-
-/******************* 멀티 옵션 추가 *************************/
-var add_goods_option = new Array();
-
-function addGoodsOption(vls) {
-	if(!vls) return;
-
-	var f = document.goodsForm;
-
-	vls2 = vls.split("|");
-	ids = '';
-	text = '';
-	price = 0;
-	saveQty = 9999;
-	
-	for(q=0;q<vls2.length;q++) {		
-		vls3 = vls2[q].split("::");
-		if(ids) ids += "_"+vls3[0];
-		else ids = vls3[0];
-
-			price += parseInt(vls3[2]);
-			if(text) text += " / "+vls3[1];
-			else text = vls3[1];
-				
-		if(saveQty>vls3[3]) saveQty = vls3[3];			
-	}
-	
-	for(q=0;q<add_goods_option.length;q++) {
-		if(ids==add_goods_option[q]) {
-			return false;
-		}
-	}
-
-	f.p_op_total_qty.value = parseInt(f.p_op_total_qty.value) + 1;	
-	price = parseInt(price);
-	// price = parseInt(f.p_price.value) + parseInt(price);
-
-	nList = document.createElement("div");
-	nList.id = "addOptions_"+ids;
-	tmps = 	'	<div class="orderline"></div>\
-				<div style="padding:20px 18px" class="cf">\
-					<div style="line-height:114%">' + text + '</div>\
-					<div style="padding-top:14px;">\
-						<div class="left left_ul" style="">\
-							<ul class="hand" style="color:#666;" onclick="cgQtyOp(\'m\',\''+ids+'\');" onmouseOver="this.style.color=\'#df3725\';" onmouseOut="this.style.color=\'#666\';">\
-								<img src="skin/default/img/common/btn_qty_down.gif">\
-							</ul>\
-							<ul>\
-								<input type="hidden" name="op_save_qty_'+ids+'" value="'+saveQty+'" />\
-								<input type="hidden" name="op_price_'+ids+'" value="'+price+'" />\
-								<input type="text" name="op_qty_'+ids+'" size="2" value="1" class="input_qty" onKeydown="onlyNum(this);" onKeyup="onlyNum(this);" onchange="ckTotalOp(\''+ids+'\')" />\
-							</ul>\
-							<ul class="hand" style="color:#666;" onclick="cgQtyOp(\'p\',\''+ids+'\');" onmouseOver="this.style.color=\'#df3725\';" onmouseOut="this.style.color=\'#666\';">\
-								<img src="skin/default/img/common/btn_qty_up.gif">\
-							</ul>\
-						</div>\
-						<div class="right left_ul">\
-							<ul id="ap_total_'+ids+'" class="lsp0 op_price">'+number_format(price)+'원</ul>\
-							<ul onclick="delGoodsOption(\''+ids+'\')"><img src="skin/default/img/common/btn_op_del.gif" class="hand"></ul>\
-						</div>\
-					</div>\
-				</div>\
-				<div style="clear:both;"></div>\
-			';
-
-	nList.innerHTML = tmps;
-
-	document.getElementById("addOptions").appendChild(nList);	
-	add_goods_option[add_goods_option.length] = ids;
-
-	ckTotalOp();
-}
-/******************* 멀티 옵션 추가 *************************/
-
-
-
-getAfters = new getAfter('10','5','0','&cate=108000000000&number=58709&wid=wkjnever');
-getAfters.display();
-aPage = new ajaxPaging('aPage','paging3',getAfters,'5','10','10','ankerA');
-aPage.makePage();
-aPage.printPage("jum");
-afterViewNum = '';
-
-getQna = new getQna('5','23','0','&cate=108000000000&number=58709');
-getQna.display();
-qPage = new ajaxPaging('qPage','paging2',getQna,'23','5','10','ankerQ');
-qPage.makePage();
-qPage.printPage("jum");
-
-
-var f = document.goodsForm;
-
-ckTotalOp();
-
-/******* 문의 작성후 자동이동 ******/
-
-function fnMove(seq){
-	var offset = $("#" + seq).offset();
-	$('html, body').animate({scrollTop : offset.top}, 300);
-}
-var foucus = '';
-if(foucus) setTimeout("fnMove('');", 200);
-
-photo_view("detailViews");	// 이미지 새창
-/*$(document).ready(function(){
-	setTimeout(function() {
-		photo_view("detailViews",window.innerHeight);	// 이미지 새창
-	}, 1500);
-});*/
-
-function qnaAlert(){
-	var obj = document.getElementById("qna_alert");
-	if(!getCookie("qnaAlert")) {
-		obj.style.display = "block";
-	}
-}
-
-function qnaAlert_ok(){
-	var obj = document.getElementById("qna_alert");
-	setCookie("qnaAlert", "1" , 30); // 30일
-	obj.style.display = "none";
-}
-
-//커스텀 메뉴 자동 숨김
-$(window).resize(function(){
-	if(window.innerWidth < 1500) $('#custom_code').hide();
-	else $('#custom_code').show();
-});
-if(window.innerWidth < 1500) $('#custom_code').hide();
-
-
-/************ 이미지 우클릭 방지 **************/
-const rightClickElem = document.getElementById("rightClick");
- 
-document.addEventListener("contextmenu", e => {
-	const bodyWidth = document.body.clientWidth;
-	let rceWidth;
-	e.target.matches("img") && (
-		e.preventDefault(),
-		rightClickElem.classList.remove("hidden"),
-		rceWidth = Math.ceil(rightClickElem.getBoundingClientRect().width),
-		rightClickElem.style.left = `${
-			e.pageX >= bodyWidth - rceWidth
-			? (
-				rceWidth >= bodyWidth
-				? 0
-				: bodyWidth - rceWidth
-			)
-			: e.pageX
-		}px`,
-		rightClickElem.style.top = `${e.pageY - rightClickElem.clientHeight}px`
-	);
-}),
-document.addEventListener("mousedown", () => {
-	rightClickElem.classList.add("hidden"),
-	rightClickElem.style.left = 0,
-	rightClickElem.style.top = 0;
-});
-/************ 이미지 우클릭 방지 **************/
-
-// -->
-</script><!-- @CHANNEL CODE INCLUDE -->
-<!-- BOTTOM INCLUDE -->
-<div id="footer" style='z-Index:1;'>
-	<div id="copyArea" class="siteWidth">
-
-		<div id="copyMenu">
-			<li  style="padding-left:0;"><a href='index.php?channel=doc_advertising' >광고상품 안내</a></li>
-			<li><a href='index.php?channel=board&code=faq' class="">자주하는질문</a></li>
-			<li ><a href='index.php?channel=board&code=customer' class="">문의게시판</a></li>
-			<li ><a href='index.php?channel=doc_company'>회사소개</a></li>
-			<li><a href='index.php?channel=docu&amp;mode=B' >이용약관</font></a></li>
-			<li><a href='index.php?channel=docu&amp;mode=C' ><font class="ddgray">개인정보취급방침</font></a></li>
-			<!-- <li><a href='index.php?channel=docu&amp;mode=D' class="">이용안내</a></li> -->
-			<!-- <li><a href='index.php?channel=board&amp;code=cooperation' class="">제휴/광고문의</a></li> -->
-			<!-- <li><a href='index.php?channel=board&amp;code=sales' class="">제품문의</a></li> -->
-			
-			<div style='float:right;padding-right:64px;'>
-				<a href="index.php"><font class="eng gray" style="font-size:9px">HOME</font></a> &nbsp;&nbsp;				
-				<a href="#" onclick="goTop();return false;"><font class="eng gray" style="font-size:9px">TOP</font></a>
-			</div>		
-		</div>	
-
-		
-		
-		
-		<div id="copyText">
-			<li >
-				<div class="left" >주소 : 서울시 서초구 사임당로8길13, 402호</div>
-				<div class="left"><span style="margin:0 6px">/</span>대표전화<font class="lsp0"> : 02-877-0408</font></div>
-				<div class="left"><span style="margin:0 6px">/</span><font class="lsp0">E-mail : artmug@artmug.kr</font></div>
-			</li>
-			<li>
-				<div class="left">회사명 : ㈜인코웍스</div>
-				<div class="left" style="padding-left:10px;">대표자 : 안병환</div>
-				<div class="left" style="padding-left:10px;">사업자등록번호 : 197-88-00622</div>
-				<!-- <div class="left" style="padding-left:10px;">통신판매업신고번호 : </div> -->
-				<!-- <div class="left" style="padding-left:6px;"><a href="" target="_blank">[사업자정보확인]</a></div> -->
-			</li>
-			<li>아트머그(주식회사 인코웍스)는 통신판매 플랫폼 제공자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매회원에게 있습니다.</li>
-			<li>호스팅 제공자 : 카페24(주)</li>
-		</div>		
-		<div class="copyr">Copyright © 2017&nbsp;INCOWORKS Corp.&nbsp;All Right Reserved.</div>
-		<div id="copyLogo">
-			
-		</div>
-			
-	</div>
-	<div style="clear:both;height:38px;">&nbsp;</div>
-	<div id="go_mobile" style="display: none" onClick="location.href='/m/'" >모바일 버전</div>
-</div>
-
-
-
-
-
-<script type="text/javascript">
-<!--
-var ckLogins = "N";
-
-/*******  모바일 모드 버튼 활성 ***********/
-var filter = "win16|win32|win64|mac|macintel";
-if ( navigator.platform ) {
-	if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
-		document.getElementById('go_mobile').style.display='block';
-	} 
-}
-
-//-->
-</script>
-<!-- @BOTTOM INCLUDE -->
-
-<iframe name="HFrm" id="HFrm" style="display:none"></iframe>
-
-<script type="text/javascript">
-<!--
-
-/* 뱃지 표시 */
-function badge_order(num){
-	document.getElementById("badge_order").innerHTML="<div class='badge'>"+num+"</div>";
-	return false;
-}
-function badge_qna(num){
-	document.getElementById("badge_qna").innerHTML="<div class='badge'>"+num+"</div>";
-	return false;
-}
-function badge_sum(num){
-	document.getElementById("badge_sum").innerHTML="<div class='badge'>"+num+"</div>";
-	return false;
-}
-
-
-(function(){ // 모바일 PC 버전 보정
-
-	if ( navigator.platform ) {
-		if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
-			document.getElementById("wrapBody").className = "mobile_view";
-		} 
-	}
-	
-})()
-
-//-->
-</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X0HXDZKY4G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-X0HXDZKY4G');
-</script>
-
-<!-- 네이버 전환분석, 모든페이지, 전환페이지 설정값보다 항상 하단에 위치해야함 --> 
-<script type="text/javascript" src="//wcs.naver.net/wcslog.js"> </script> 
-<script type="text/javascript"> 
-if (!wcs_add) var wcs_add={};
-wcs_add["wa"] = "s_15f74d756bdd";
-if (!_nasa) var _nasa={};
-wcs.inflow();
-wcs_do(_nasa);
-</script>
-
-
-
 </body>
 </html>
-
-<script>
-function isPC() {
-  const userAgent = navigator.userAgent;
-  const mobileRegex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-  return !mobileRegex.test(userAgent); // 모바일 키워드가 없으면 PC로 판단
-}
-
-clearTimeout(myTimer);
-var myTimer = setTimeout(function() {
-	if (!isPC()) {
-	  location.replace("/m/index.php?channel=view&uid=58709");	
-	}
-}, 1000);
-
-</script>
